@@ -21,7 +21,7 @@ Documentation of WICE can be found in the [`docs/`](./docs) directory.
 
 ## License
 
-The contents of this repository are licensed under the permissive version of the [CERN Open Hardware Licence Version 2][cern-ohl-v2]
+The contents of this repository are licensed under the weakly-reciprocal version of the [CERN Open Hardware Licence Version 2][cern-ohl-v2]
 
 ## Funding acknowledment
 
@@ -34,4 +34,4 @@ The contents of this repository are licensed under the permissive version of the
 [uel]: https://www.uel4-0.de/
 [uel-infis]: https://www.uel4-0.de/Infrastruktur/Mobiler-Pruefstand/
 [erigrid-2]: https://erigrid2.eu
-[cern-ohl-v2]: https://ohwr.org/project/cernohl/blob/master/licence_texts/cern_ohl_p_v2.txt
+[cern-ohl-v2]: https://ohwr.org/cern_ohl_w_v2.txt
