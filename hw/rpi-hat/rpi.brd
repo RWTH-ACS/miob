@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="10" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -384,14 +384,14 @@
 <wire x1="-12.7" y1="-11.43" x2="12.7" y2="-11.43" width="0.127" layer="21"/>
 <wire x1="12.7" y1="-11.43" x2="12.7" y2="13.97" width="0.127" layer="21"/>
 <wire x1="12.7" y1="13.97" x2="-12.7" y2="13.97" width="0.127" layer="21"/>
-<pad name="P3" x="-10.16" y="-8.88" drill="0.6" shape="long" rot="R270"/>
+<pad name="P3" x="-10.16" y="-8.88" drill="1.5" shape="long" rot="R270"/>
 <text x="-3.81" y="-3.81" size="1.27" layer="21" rot="R180">&gt;VALUE</text>
 <text x="-3.81" y="6.35" size="1.27" layer="21" rot="R180">&gt;NAME</text>
-<pad name="P1" x="-2.54" y="11.42" drill="0.6" shape="long" rot="R270"/>
-<pad name="P2" x="2.54" y="11.42" drill="0.6" shape="long" rot="R270"/>
-<pad name="P4" x="0" y="-8.88" drill="0.6" shape="long" rot="R270"/>
-<pad name="P5" x="10.16" y="-8.88" drill="0.6" shape="long" rot="R270"/>
-<pad name="P6" x="10.16" y="11.42" drill="0.6" shape="long" rot="R270"/>
+<pad name="P1" x="-2.54" y="11.42" drill="1.5" shape="long" rot="R270"/>
+<pad name="P2" x="2.54" y="11.42" drill="1.5" shape="long" rot="R270"/>
+<pad name="P4" x="0" y="-8.88" drill="1.5" shape="long" rot="R270"/>
+<pad name="P5" x="10.16" y="-8.88" drill="1.5" shape="long" rot="R270"/>
+<pad name="P6" x="10.16" y="11.42" drill="1.5" shape="long" rot="R270"/>
 </package>
 <package name="JW2FORMC">
 <wire x1="-14.3" y1="-6.4" x2="-14.3" y2="6.4" width="0.127" layer="21"/>
