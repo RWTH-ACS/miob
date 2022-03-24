@@ -8,3 +8,4 @@ However, the x86_64 `hw_server` can be executed via QEmu Userspace Emulation als
 ## Setup
 
 - [Steffens Blog](https://noteblok.net/2022/02/23/running-a-xilinx-hw_server-as-docker-container/)
+- [`docker-qemu-interpreter.service`](../sw/docker-qemu-interpreter.service)
