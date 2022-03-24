@@ -1,0 +1,15 @@
+pi@miob-1:~ $ cat /etc/systemd/system/docker-qemu-interpreter.service 
+[Unit]
+Description=Start docker container for QEMU x86 emulation
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=no
+ExecStart=docker run --rm --privileged aptman/qus -s -- -p x86_64
+ExecStop=
+
+[Install]
+WantedBy=default.target
+
+
