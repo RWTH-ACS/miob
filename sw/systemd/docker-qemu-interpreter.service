@@ -1,4 +1,3 @@
-pi@miob-1:~ $ cat /etc/systemd/system/docker-qemu-interpreter.service 
 [Unit]
 Description=Start docker container for QEMU x86 emulation
 Requires=docker.service
