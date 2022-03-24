@@ -12,7 +12,7 @@ This repository contains the construction drawings, bill of materials, software 
 
 ## Documentation
 
-Documentation of WICE can be found in the [`docs/`](./docs) directory.
+Documentation of MIOB can be found in the [`docs/`](./docs) directory.
 
 ## Authors
 
