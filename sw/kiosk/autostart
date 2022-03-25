@@ -1,0 +1,9 @@
+# Bildschirmschoner ausschalten
+#@xscreensaver -no-splash
+
+@xset s off
+@xset -dpms
+@xset s noblank
+
+# startet Chromium im vollbild und incognito Modus - öffnet die Webseite http://b12w4.myraidbox.de
+@/home/pi/kiosk.sh
