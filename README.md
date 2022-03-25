@@ -14,6 +14,11 @@ This repository contains the construction drawings, bill of materials, software 
 
 Documentation of MIOB can be found in the [`docs/`](./docs) directory.
 
+## Photos
+
+![Front View](photos/miob_front.jpeg)
+![Top View](photos/miob_top.jpeg)
+
 ## Authors
 
 - Niklas Eiling ([@n-eiling](https://github.com/n-eiling)), Institute for Automation of Complex Power Systems, RWTH Aachen University)
