@@ -1,0 +1,12 @@
+broker:
+#  url: amqp://villas:Haegiethu0rohtee@kubernetes-master-1.os-cloud.eonerc.rwth-aachen.de:30809/%2F
+  url: amqp://villas:Haegiethu0rohtee@137.226.248.165:30809/%2F
+
+components:
+- location: ACS Lab
+  name: 'miob-1'
+  owner: svg
+  realm: de.rwth-aachen.eonerc.acs
+  category: manager
+  type: miob
+  uuid: 18b979fe-ac43-11ec-95be-f391f46606cb
