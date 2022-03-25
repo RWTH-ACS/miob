@@ -9,3 +9,14 @@ However, the x86_64 `hw_server` can be executed via QEmu Userspace Emulation als
 
 - [Steffens Blog](https://noteblok.net/2022/02/23/running-a-xilinx-hw_server-as-docker-container/)
 - [`docker-qemu-interpreter.service`](../sw/docker-qemu-interpreter.service)
+
+
+Install docker-qemu-interpreter.service to /etc/systemd/system/docker-qemu-interpreter.service
+
+Then run
+
+```bash
+sudo systemctl enable docker-qemu-interpreter.service
+```
+
+This automatically start the qemu x86 interpreter once

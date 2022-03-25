@@ -12,7 +12,10 @@ This repository contains the construction drawings, bill of materials, software 
 
 ## Documentation
 
-Documentation of MIOB can be found in the [`docs/`](./docs) directory.
+- [Xilinx HWserver](./sw/hw_server/README.md)
+- [Touchpanel Display](./sw/touchpanel/README.md)
+  - [Kiosk Mode](./sw/kiosk/README.md)
+- [VILLAScontroller](./sw/villas-controller/README.md)
 
 ## Photos
 
