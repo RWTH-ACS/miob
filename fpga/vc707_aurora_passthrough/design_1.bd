@@ -15,27 +15,13 @@
       "clk_wiz_1": "",
       "xlconstant_0": "",
       "xlconstant_1": "",
-      "P2_status": "",
-      "axis_clock_converter_0": "",
-      "axis_clock_converter_1": "",
-      "xlconstant_2": "",
-      "P1_status": "",
-      "xlconcat_0": "",
-      "axis_clock_converter_2": "",
       "aurora_demo_0": "",
       "aurora_8b10b_1": "",
       "util_ds_buf_0": "",
-      "xlconcat_1": "",
-      "axis_clock_converter_3": "",
-      "util_vector_logic_2": "",
-      "util_vector_logic_3": "",
-      "xlconstant_3": "",
-      "axis_clock_converter_4": "",
-      "axis_clock_converter_5": "",
-      "P2_rx": "",
-      "P1_rx": "",
       "xlconstant_4": "",
-      "xlconstant_5": ""
+      "xlconstant_5": "",
+      "Channel0_rx": "",
+      "Channel1_rx": ""
     },
     "interface_ports": {
       "GT_SERIAL_RX_0": {
@@ -240,104 +226,6 @@
           }
         }
       },
-      "P2_status": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_P2_status_0",
-        "xci_path": "ip/design_1_P2_status_0/design_1_P2_status_0.xci",
-        "inst_hier_path": "P2_status",
-        "parameters": {
-          "C_NUM_OF_PROBES": {
-            "value": "9"
-          },
-          "C_SLOT_0_AXI_PROTOCOL": {
-            "value": "AXI4S"
-          }
-        }
-      },
-      "axis_clock_converter_0": {
-        "vlnv": "xilinx.com:ip:axis_clock_converter:1.1",
-        "xci_name": "design_1_axis_clock_converter_0_0",
-        "xci_path": "ip/design_1_axis_clock_converter_0_0/design_1_axis_clock_converter_0_0.xci",
-        "inst_hier_path": "axis_clock_converter_0",
-        "parameters": {
-          "HAS_TKEEP": {
-            "value": "1"
-          },
-          "HAS_TLAST": {
-            "value": "1"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "2"
-          }
-        }
-      },
-      "axis_clock_converter_1": {
-        "vlnv": "xilinx.com:ip:axis_clock_converter:1.1",
-        "xci_name": "design_1_axis_clock_converter_1_0",
-        "xci_path": "ip/design_1_axis_clock_converter_1_0/design_1_axis_clock_converter_1_0.xci",
-        "inst_hier_path": "axis_clock_converter_1",
-        "parameters": {
-          "SYNCHRONIZATION_STAGES": {
-            "value": "3"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "2"
-          }
-        }
-      },
-      "xlconstant_2": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_2_0",
-        "xci_path": "ip/design_1_xlconstant_2_0/design_1_xlconstant_2_0.xci",
-        "inst_hier_path": "xlconstant_2",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "1"
-          }
-        }
-      },
-      "P1_status": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_P1_status_0",
-        "xci_path": "ip/design_1_P1_status_0/design_1_P1_status_0.xci",
-        "inst_hier_path": "P1_status",
-        "parameters": {
-          "C_NUM_OF_PROBES": {
-            "value": "9"
-          },
-          "C_SLOT_0_AXI_PROTOCOL": {
-            "value": "AXI4S"
-          }
-        }
-      },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "xci_name": "design_1_xlconcat_0_0",
-        "xci_path": "ip/design_1_xlconcat_0_0/design_1_xlconcat_0_0.xci",
-        "inst_hier_path": "xlconcat_0",
-        "parameters": {
-          "NUM_PORTS": {
-            "value": "16"
-          }
-        }
-      },
-      "axis_clock_converter_2": {
-        "vlnv": "xilinx.com:ip:axis_clock_converter:1.1",
-        "xci_name": "design_1_axis_clock_converter_2_0",
-        "xci_path": "ip/design_1_axis_clock_converter_2_0/design_1_axis_clock_converter_2_0.xci",
-        "inst_hier_path": "axis_clock_converter_2",
-        "parameters": {
-          "HAS_TKEEP": {
-            "value": "1"
-          },
-          "HAS_TLAST": {
-            "value": "1"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "2"
-          }
-        }
-      },
       "aurora_demo_0": {
         "vlnv": "xilinx.com:module_ref:aurora_demo:1.0",
         "xci_name": "design_1_aurora_demo_0_0",
@@ -523,132 +411,6 @@
           }
         }
       },
-      "xlconcat_1": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "xci_name": "design_1_xlconcat_1_0",
-        "xci_path": "ip/design_1_xlconcat_1_0/design_1_xlconcat_1_0.xci",
-        "inst_hier_path": "xlconcat_1",
-        "parameters": {
-          "NUM_PORTS": {
-            "value": "16"
-          }
-        }
-      },
-      "axis_clock_converter_3": {
-        "vlnv": "xilinx.com:ip:axis_clock_converter:1.1",
-        "xci_name": "design_1_axis_clock_converter_3_0",
-        "xci_path": "ip/design_1_axis_clock_converter_3_0/design_1_axis_clock_converter_3_0.xci",
-        "inst_hier_path": "axis_clock_converter_3",
-        "parameters": {
-          "SYNCHRONIZATION_STAGES": {
-            "value": "3"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "2"
-          }
-        }
-      },
-      "util_vector_logic_2": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "design_1_util_vector_logic_2_0",
-        "xci_path": "ip/design_1_util_vector_logic_2_0/design_1_util_vector_logic_2_0.xci",
-        "inst_hier_path": "util_vector_logic_2",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
-      "util_vector_logic_3": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "design_1_util_vector_logic_3_0",
-        "xci_path": "ip/design_1_util_vector_logic_3_0/design_1_util_vector_logic_3_0.xci",
-        "inst_hier_path": "util_vector_logic_3",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
-      "xlconstant_3": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_3_0",
-        "xci_path": "ip/design_1_xlconstant_3_0/design_1_xlconstant_3_0.xci",
-        "inst_hier_path": "xlconstant_3",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "1"
-          }
-        }
-      },
-      "axis_clock_converter_4": {
-        "vlnv": "xilinx.com:ip:axis_clock_converter:1.1",
-        "xci_name": "design_1_axis_clock_converter_4_0",
-        "xci_path": "ip/design_1_axis_clock_converter_4_0/design_1_axis_clock_converter_4_0.xci",
-        "inst_hier_path": "axis_clock_converter_4",
-        "parameters": {
-          "HAS_TLAST": {
-            "value": "1"
-          },
-          "SYNCHRONIZATION_STAGES": {
-            "value": "3"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "2"
-          }
-        }
-      },
-      "axis_clock_converter_5": {
-        "vlnv": "xilinx.com:ip:axis_clock_converter:1.1",
-        "xci_name": "design_1_axis_clock_converter_5_0",
-        "xci_path": "ip/design_1_axis_clock_converter_5_0/design_1_axis_clock_converter_5_0.xci",
-        "inst_hier_path": "axis_clock_converter_5",
-        "parameters": {
-          "HAS_TLAST": {
-            "value": "1"
-          },
-          "SYNCHRONIZATION_STAGES": {
-            "value": "3"
-          },
-          "TDATA_NUM_BYTES": {
-            "value": "2"
-          }
-        }
-      },
-      "P2_rx": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_P2_rx_0",
-        "xci_path": "ip/design_1_P2_rx_0/design_1_P2_rx_0.xci",
-        "inst_hier_path": "P2_rx",
-        "parameters": {
-          "C_NUM_OF_PROBES": {
-            "value": "9"
-          },
-          "C_SLOT_0_AXI_PROTOCOL": {
-            "value": "AXI4S"
-          }
-        }
-      },
-      "P1_rx": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_P1_rx_0",
-        "xci_path": "ip/design_1_P1_rx_0/design_1_P1_rx_0.xci",
-        "inst_hier_path": "P1_rx",
-        "parameters": {
-          "C_NUM_OF_PROBES": {
-            "value": "9"
-          },
-          "C_SLOT_0_AXI_PROTOCOL": {
-            "value": "AXI4S"
-          }
-        }
-      },
       "xlconstant_4": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "design_1_xlconstant_4_0",
@@ -671,6 +433,52 @@
           },
           "CONST_WIDTH": {
             "value": "4"
+          }
+        }
+      },
+      "Channel0_rx": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "xci_path": "ip/design_1_ila_0_0/design_1_ila_0_0.xci",
+        "inst_hier_path": "Channel0_rx",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "131072"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "14"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "Channel1_rx": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_Channel0_rx_0",
+        "xci_path": "ip/design_1_Channel0_rx_0/design_1_Channel0_rx_0.xci",
+        "inst_hier_path": "Channel1_rx",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "131072"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "13"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "16"
           }
         }
       }
@@ -700,46 +508,10 @@
           "aurora_8b10b_0/GT_SERIAL_TX"
         ]
       },
-      "aurora_8b10b_0_USER_DATA_M_AXI_RX": {
-        "interface_ports": [
-          "axis_clock_converter_0/S_AXIS",
-          "aurora_8b10b_0/USER_DATA_M_AXI_RX"
-        ]
-      },
       "aurora_8b10b_1_GT_SERIAL_TX": {
         "interface_ports": [
           "GT_SERIAL_TX_1",
           "aurora_8b10b_1/GT_SERIAL_TX"
-        ]
-      },
-      "axis_clock_converter_1_M_AXIS": {
-        "interface_ports": [
-          "axis_clock_converter_1/M_AXIS",
-          "P1_status/SLOT_0_AXIS"
-        ]
-      },
-      "axis_clock_converter_2_M_AXIS": {
-        "interface_ports": [
-          "axis_clock_converter_2/M_AXIS",
-          "aurora_8b10b_0/USER_DATA_S_AXI_TX"
-        ]
-      },
-      "axis_clock_converter_3_M_AXIS": {
-        "interface_ports": [
-          "axis_clock_converter_3/M_AXIS",
-          "P2_status/SLOT_0_AXIS"
-        ]
-      },
-      "axis_clock_converter_4_M_AXIS": {
-        "interface_ports": [
-          "axis_clock_converter_4/M_AXIS",
-          "P2_rx/SLOT_0_AXIS"
-        ]
-      },
-      "axis_clock_converter_5_M_AXIS": {
-        "interface_ports": [
-          "axis_clock_converter_5/M_AXIS",
-          "P1_rx/SLOT_0_AXIS"
         ]
       },
       "sys_diff_clock_1": {
@@ -750,42 +522,10 @@
       }
     },
     "nets": {
-      "Net": {
-        "ports": [
-          "axis_clock_converter_0/m_axis_tdata",
-          "axis_clock_converter_5/s_axis_tdata",
-          "aurora_8b10b_1/s_axi_tx_tdata"
-        ]
-      },
-      "Net1": {
-        "ports": [
-          "axis_clock_converter_0/m_axis_tlast",
-          "axis_clock_converter_5/s_axis_tlast",
-          "aurora_8b10b_1/s_axi_tx_tlast"
-        ]
-      },
-      "Net2": {
-        "ports": [
-          "util_vector_logic_3/Res",
-          "axis_clock_converter_2/s_axis_aresetn",
-          "axis_clock_converter_4/s_axis_aresetn",
-          "axis_clock_converter_0/m_axis_aresetn",
-          "axis_clock_converter_5/s_axis_aresetn",
-          "axis_clock_converter_3/s_axis_aresetn"
-        ]
-      },
       "Net3": {
         "ports": [
           "clk_wiz_1/clk_100mhz",
-          "axis_clock_converter_3/m_axis_aclk",
-          "P2_status/clk",
-          "P1_status/clk",
-          "axis_clock_converter_1/m_axis_aclk",
           "aurora_demo_0/clk",
-          "axis_clock_converter_5/m_axis_aclk",
-          "axis_clock_converter_4/m_axis_aclk",
-          "P2_rx/clk",
-          "P1_rx/clk",
           "aurora_8b10b_0/drpclk_in",
           "aurora_8b10b_0/init_clk_in",
           "aurora_8b10b_1/init_clk_in",
@@ -795,25 +535,25 @@
       "aurora_8b10b_0_channel_up": {
         "ports": [
           "aurora_8b10b_0/channel_up",
-          "xlconcat_0/In0"
+          "Channel0_rx/probe3"
         ]
       },
       "aurora_8b10b_0_crc_pass_fail_n": {
         "ports": [
           "aurora_8b10b_0/crc_pass_fail_n",
-          "xlconcat_0/In1"
+          "Channel0_rx/probe4"
         ]
       },
       "aurora_8b10b_0_crc_valid": {
         "ports": [
           "aurora_8b10b_0/crc_valid",
-          "xlconcat_0/In2"
+          "Channel0_rx/probe5"
         ]
       },
       "aurora_8b10b_0_frame_err": {
         "ports": [
           "aurora_8b10b_0/frame_err",
-          "xlconcat_0/In3"
+          "Channel0_rx/probe6"
         ]
       },
       "aurora_8b10b_0_gt_qpllclk_quad7_out": {
@@ -837,25 +577,58 @@
       "aurora_8b10b_0_hard_err": {
         "ports": [
           "aurora_8b10b_0/hard_err",
-          "xlconcat_0/In4"
+          "Channel0_rx/probe7"
         ]
       },
       "aurora_8b10b_0_lane_up": {
         "ports": [
           "aurora_8b10b_0/lane_up",
-          "xlconcat_0/In5"
+          "Channel0_rx/probe8"
+        ]
+      },
+      "aurora_8b10b_0_m_axi_rx_tdata": {
+        "ports": [
+          "aurora_8b10b_0/m_axi_rx_tdata",
+          "Channel0_rx/probe0",
+          "aurora_8b10b_1/s_axi_tx_tdata"
+        ]
+      },
+      "aurora_8b10b_0_m_axi_rx_tkeep": {
+        "ports": [
+          "aurora_8b10b_0/m_axi_rx_tkeep",
+          "aurora_8b10b_1/s_axi_tx_tkeep"
+        ]
+      },
+      "aurora_8b10b_0_m_axi_rx_tlast": {
+        "ports": [
+          "aurora_8b10b_0/m_axi_rx_tlast",
+          "Channel0_rx/probe1",
+          "aurora_8b10b_1/s_axi_tx_tlast"
+        ]
+      },
+      "aurora_8b10b_0_m_axi_rx_tvalid": {
+        "ports": [
+          "aurora_8b10b_0/m_axi_rx_tvalid",
+          "Channel0_rx/probe2",
+          "aurora_8b10b_1/s_axi_tx_tvalid"
+        ]
+      },
+      "aurora_8b10b_0_pll_not_locked_out": {
+        "ports": [
+          "aurora_8b10b_0/pll_not_locked_out",
+          "Channel0_rx/probe9"
         ]
       },
       "aurora_8b10b_0_rx_resetdone_out": {
         "ports": [
           "aurora_8b10b_0/rx_resetdone_out",
-          "xlconcat_0/In7"
+          "Channel0_rx/probe10"
         ]
       },
       "aurora_8b10b_0_soft_err": {
         "ports": [
           "aurora_8b10b_0/soft_err",
-          "xlconcat_0/In8"
+          "Channel0_rx/probe11"
         ]
       },
       "aurora_8b10b_0_sync_clk_out": {
@@ -867,127 +640,114 @@
       "aurora_8b10b_0_sys_reset_out": {
         "ports": [
           "aurora_8b10b_0/sys_reset_out",
-          "util_vector_logic_2/Op1",
           "aurora_8b10b_1/reset"
         ]
       },
       "aurora_8b10b_0_tx_lock": {
         "ports": [
           "aurora_8b10b_0/tx_lock",
-          "xlconcat_0/In9"
+          "Channel0_rx/probe12"
         ]
       },
       "aurora_8b10b_0_tx_resetdone_out": {
         "ports": [
           "aurora_8b10b_0/tx_resetdone_out",
-          "xlconcat_0/In10"
+          "Channel0_rx/probe13"
         ]
       },
       "aurora_8b10b_0_user_clk_out": {
         "ports": [
           "aurora_8b10b_0/user_clk_out",
-          "axis_clock_converter_2/m_axis_aclk",
-          "axis_clock_converter_0/s_axis_aclk",
-          "axis_clock_converter_1/s_axis_aclk",
           "aurora_8b10b_1/user_clk",
-          "axis_clock_converter_2/s_axis_aclk",
-          "axis_clock_converter_4/s_axis_aclk",
-          "axis_clock_converter_0/m_axis_aclk",
-          "axis_clock_converter_5/s_axis_aclk",
-          "axis_clock_converter_3/s_axis_aclk"
+          "Channel0_rx/clk",
+          "Channel1_rx/clk"
         ]
       },
       "aurora_8b10b_1_channel_up": {
         "ports": [
           "aurora_8b10b_1/channel_up",
-          "xlconcat_1/In0"
+          "Channel1_rx/probe3"
         ]
       },
       "aurora_8b10b_1_crc_pass_fail_n": {
         "ports": [
           "aurora_8b10b_1/crc_pass_fail_n",
-          "xlconcat_1/In1"
+          "Channel1_rx/probe4"
         ]
       },
       "aurora_8b10b_1_crc_valid": {
         "ports": [
           "aurora_8b10b_1/crc_valid",
-          "xlconcat_1/In2"
+          "Channel1_rx/probe5"
         ]
       },
       "aurora_8b10b_1_frame_err": {
         "ports": [
           "aurora_8b10b_1/frame_err",
-          "xlconcat_1/In3"
+          "Channel1_rx/probe6"
         ]
       },
       "aurora_8b10b_1_hard_err": {
         "ports": [
           "aurora_8b10b_1/hard_err",
-          "xlconcat_1/In4"
+          "Channel1_rx/probe7"
         ]
       },
       "aurora_8b10b_1_lane_up": {
         "ports": [
           "aurora_8b10b_1/lane_up",
-          "xlconcat_1/In5"
+          "Channel1_rx/probe8"
         ]
       },
       "aurora_8b10b_1_m_axi_rx_tdata": {
         "ports": [
           "aurora_8b10b_1/m_axi_rx_tdata",
-          "axis_clock_converter_2/s_axis_tdata",
-          "axis_clock_converter_4/s_axis_tdata"
+          "aurora_8b10b_0/s_axi_tx_tdata",
+          "Channel1_rx/probe0"
         ]
       },
       "aurora_8b10b_1_m_axi_rx_tkeep": {
         "ports": [
           "aurora_8b10b_1/m_axi_rx_tkeep",
-          "axis_clock_converter_2/s_axis_tkeep"
+          "aurora_8b10b_0/s_axi_tx_tkeep"
         ]
       },
       "aurora_8b10b_1_m_axi_rx_tlast": {
         "ports": [
           "aurora_8b10b_1/m_axi_rx_tlast",
-          "axis_clock_converter_2/s_axis_tlast",
-          "axis_clock_converter_4/s_axis_tlast"
+          "aurora_8b10b_0/s_axi_tx_tlast",
+          "Channel1_rx/probe2"
         ]
       },
       "aurora_8b10b_1_m_axi_rx_tvalid": {
         "ports": [
           "aurora_8b10b_1/m_axi_rx_tvalid",
-          "axis_clock_converter_2/s_axis_tvalid",
-          "axis_clock_converter_4/s_axis_tvalid"
+          "Channel1_rx/probe1",
+          "aurora_8b10b_0/s_axi_tx_tvalid"
         ]
       },
       "aurora_8b10b_1_rx_resetdone_out": {
         "ports": [
           "aurora_8b10b_1/rx_resetdone_out",
-          "xlconcat_1/In8"
-        ]
-      },
-      "aurora_8b10b_1_s_axi_tx_tready": {
-        "ports": [
-          "aurora_8b10b_1/s_axi_tx_tready",
-          "axis_clock_converter_0/m_axis_tready"
+          "Channel1_rx/probe9"
         ]
       },
       "aurora_8b10b_1_soft_err": {
         "ports": [
           "aurora_8b10b_1/soft_err",
-          "xlconcat_1/In9"
-        ]
-      },
-      "aurora_8b10b_1_sys_reset_out": {
-        "ports": [
-          "aurora_8b10b_1/sys_reset_out",
-          "util_vector_logic_3/Op1"
+          "Channel1_rx/probe10"
         ]
       },
       "aurora_8b10b_1_tx_lock": {
         "ports": [
           "aurora_8b10b_1/tx_lock",
-          "xlconcat_1/In10"
+          "Channel1_rx/probe11"
+        ]
+      },
+      "aurora_8b10b_1_tx_resetdone_out": {
+        "ports": [
+          "aurora_8b10b_1/tx_resetdone_out",
+          "Channel1_rx/probe12"
         ]
       },
       "aurora_demo_0_reset": {
@@ -995,28 +755,6 @@
           "aurora_demo_0/reset",
           "aurora_8b10b_0/reset",
           "aurora_8b10b_0/gt_reset"
-        ]
-      },
-      "axis_clock_converter_0_m_axis_tkeep": {
-        "ports": [
-          "axis_clock_converter_0/m_axis_tkeep",
-          "aurora_8b10b_1/s_axi_tx_tkeep"
-        ]
-      },
-      "axis_clock_converter_0_m_axis_tvalid": {
-        "ports": [
-          "axis_clock_converter_0/m_axis_tvalid",
-          "aurora_8b10b_1/s_axi_tx_tvalid",
-          "axis_clock_converter_5/s_axis_tvalid"
-        ]
-      },
-      "clk_wiz_1_locked1": {
-        "ports": [
-          "clk_wiz_1/locked",
-          "axis_clock_converter_1/m_axis_aresetn",
-          "axis_clock_converter_3/m_axis_aresetn",
-          "axis_clock_converter_4/m_axis_aresetn",
-          "axis_clock_converter_5/m_axis_aresetn"
         ]
       },
       "reset_1": {
@@ -1032,26 +770,6 @@
           "aurora_8b10b_0/gt_refclk1"
         ]
       },
-      "util_vector_logic_2_Res": {
-        "ports": [
-          "util_vector_logic_2/Res",
-          "axis_clock_converter_2/m_axis_aresetn",
-          "axis_clock_converter_0/s_axis_aresetn",
-          "axis_clock_converter_1/s_axis_aresetn"
-        ]
-      },
-      "xlconcat_0_dout": {
-        "ports": [
-          "xlconcat_0/dout",
-          "axis_clock_converter_1/s_axis_tdata"
-        ]
-      },
-      "xlconcat_1_dout": {
-        "ports": [
-          "xlconcat_1/dout",
-          "axis_clock_converter_3/s_axis_tdata"
-        ]
-      },
       "xlconstant_0_dout": {
         "ports": [
           "xlconstant_0/dout",
@@ -1064,18 +782,6 @@
           "xlconstant_1/dout",
           "aurora_8b10b_0/power_down",
           "aurora_8b10b_1/power_down"
-        ]
-      },
-      "xlconstant_2_dout": {
-        "ports": [
-          "xlconstant_2/dout",
-          "axis_clock_converter_1/s_axis_tvalid"
-        ]
-      },
-      "xlconstant_3_dout": {
-        "ports": [
-          "xlconstant_3/dout",
-          "axis_clock_converter_3/s_axis_tvalid"
         ]
       },
       "xlconstant_4_dout": {
