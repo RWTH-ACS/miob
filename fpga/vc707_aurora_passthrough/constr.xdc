@@ -17,6 +17,7 @@ set_property PACKAGE_PIN A6 [get_ports {GT_SERIAL_RX_0_rxp[0]}]
 set_property PACKAGE_PIN B3 [get_ports {GT_SERIAL_TX_0_txn[0]}]
 set_property PACKAGE_PIN B4 [get_ports {GT_SERIAL_TX_0_txp[0]}]
 set_property PACKAGE_PIN L31 [get_ports {GT_SERIAL_DISABLE_TX_0[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {GT_SERIAL_DISABLE_TX_0[0]}]
 
 # Transceiver Channel 1 - FPGA FMC DP2
 # Quad 119 GTXE2_CHANNEL_X1Y26
@@ -25,13 +26,29 @@ set_property PACKAGE_PIN B8 [get_ports {GT_SERIAL_RX_1_rxp[0]}]
 set_property PACKAGE_PIN C1 [get_ports {GT_SERIAL_TX_1_txn[0]}]
 set_property PACKAGE_PIN C2 [get_ports {GT_SERIAL_TX_1_txp[0]}]
 set_property PACKAGE_PIN G39 [get_ports {GT_SERIAL_DISABLE_TX_1[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {GT_SERIAL_DISABLE_TX_1[0]}]
+
+# CLK Select Switches on FMC Carrier
+# P1 connected to FMC1_LA02_P
+set_property PACKAGE_PIN P41 [get_ports {CLK_SWITCHES[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {CLK_SWITCHES[0]}]
+# P2 connected to FMC1_LA02_N
+set_property PACKAGE_PIN N41 [get_ports {CLK_SWITCHES[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {CLK_SWITCHES[1]}]
+# P3 connected to FMC1_LA03_P
+set_property PACKAGE_PIN M42 [get_ports {CLK_SWITCHES[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {CLK_SWITCHES[2]}]
+# P4 connected to FMC1_LA03_N
+set_property PACKAGE_PIN L42 [get_ports {CLK_SWITCHES[3]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {CLK_SWITCHES[3]}]
+
+
 
 set_false_path -through [get_pins -hier *cdc_to*]
 
 
 
-set_property IOSTANDARD LVCMOS18 [get_ports {GT_SERIAL_DISABLE_TX_0[0]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {GT_SERIAL_DISABLE_TX_1[0]}]
+
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
