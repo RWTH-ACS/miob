@@ -9,3 +9,9 @@ Dataflow: Duplex
 Interface: Framing
 Flow Control: None
 Error Detection: CRC
+
+# Axi Switch configuration
+Channel0 connects to Channel1
+Channel2 connects to Channel3
+
+Channel4-7 not used
