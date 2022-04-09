@@ -35,7 +35,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity aurora_demo is
     Port ( clk : in STD_LOGIC;
            reset : out STD_LOGIC;
-           m_axis_tdata : out STD_LOGIC_VECTOR (15 downto 0);
+           m_axis_tdata : out STD_LOGIC_VECTOR (31 downto 0);
            m_axis_tkeep : out STD_LOGIC_VECTOR (1 downto 0);
            m_axis_tlast : out STD_LOGIC;
            m_axis_tready : in STD_LOGIC;
@@ -49,7 +49,8 @@ architecture Behavioral of aurora_demo is
     signal do_reset : std_logic := '1';
     
     constant send_frequency : integer := 10000;
-    constant clock_frequency : integer := 100e6;    
+    --constant clock_frequency : integer := 100e6;    
+    constant clock_frequency : integer := 50e6;    
     
     constant voltage1 : integer := 1;
     constant voltage2 : integer := 120;
@@ -76,17 +77,17 @@ process (clk, clk_cnt, payload_id, timestep_begin, m_axis_tready) begin
             if timestep_begin = '1' then
                 case clk_cnt is
                     when 0 =>
-                        m_axis_tdata <= std_logic_vector(to_unsigned(payload_id, 16));
+                        m_axis_tdata <= std_logic_vector(to_unsigned(payload_id, 32));
                         payload_id <= (payload_id + 1) mod 65536;
                         m_axis_tvalid <= '1';
                     when 1 =>
-                        m_axis_tdata <= std_logic_vector(to_unsigned(voltage1, 16));                    
+                        m_axis_tdata <= std_logic_vector(to_unsigned(voltage1, 32));                    
                         m_axis_tvalid <= '1';
                     when 2 =>
-                        m_axis_tdata <= std_logic_vector(to_unsigned(voltage2, 16));   
+                        m_axis_tdata <= std_logic_vector(to_unsigned(voltage2, 32));   
                         m_axis_tvalid <= '1';                
                     when 3 =>
-                        m_axis_tdata <= std_logic_vector(to_unsigned(voltage3, 16));      
+                        m_axis_tdata <= std_logic_vector(to_unsigned(voltage3, 32));      
                         m_axis_tvalid <= '1';   
                         m_axis_tlast <= '1';
                     when 4 =>

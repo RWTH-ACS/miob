@@ -205,7 +205,7 @@
             "value": "1"
           },
           "C_LANE_WIDTH": {
-            "value": "2"
+            "value": "4"
           },
           "C_LINE_RATE": {
             "value": "2"
@@ -327,7 +327,7 @@
             "value": "1"
           },
           "C_LANE_WIDTH": {
-            "value": "2"
+            "value": "4"
           },
           "C_LINE_RATE": {
             "value": "2"
@@ -533,6 +533,9 @@
           "C_GT_LOC_25": {
             "value": "1"
           },
+          "C_LANE_WIDTH": {
+            "value": "4"
+          },
           "C_LINE_RATE": {
             "value": "2"
           },
@@ -561,6 +564,9 @@
           },
           "C_GT_LOC_26": {
             "value": "1"
+          },
+          "C_LANE_WIDTH": {
+            "value": "4"
           },
           "C_LINE_RATE": {
             "value": "2"
@@ -1680,8 +1686,8 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
+                "value": "50000000",
+                "value_src": "default_prop"
               },
               "ID_WIDTH": {
                 "value": "0",
@@ -1769,7 +1775,7 @@
               },
               "PHASE": {
                 "value": "0",
-                "value_src": "user_prop"
+                "value_src": "default_prop"
               },
               "CLK_DOMAIN": {
                 "value": "design_1_aurora_8b10b_0_0_user_clk_out",
@@ -1888,12 +1894,12 @@
                 "value_src": "constant"
               },
               "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
+                "value": "50000000",
+                "value_src": "default_prop"
               },
               "PHASE": {
                 "value": "0",
-                "value_src": "user_prop"
+                "value_src": "default_prop"
               },
               "CLK_DOMAIN": {
                 "value": "design_1_aurora_8b10b_0_0_user_clk_out",

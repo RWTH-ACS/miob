@@ -1,0 +1,6 @@
+*.bda
+fpga/*/ip
+fpga/*/ipshared
+fpga/*/ui
+
+.directory
