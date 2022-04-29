@@ -1,0 +1,15 @@
+[Unit]
+Description=Program the FPGA
+After=hw_server.service
+Requires=hw_server.service
+
+[Service]
+Type=forking
+TimeoutStartSec=infinity
+Restart=no
+ExecStart=/usr/bin/docker run --rm --name fpga_program -v /bitstreams:/bitstreams --entrypoint xsdb --platform linux/amd64 ghcr.io/stv0g/hw_server:v2021.2 /bitstreams/fpga-program.tcl 172.17.0.1 /bitstreams/default.bit
+
+
+[Install]
+WantedBy=multi-user.target
+

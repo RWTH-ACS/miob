@@ -4,6 +4,7 @@ if { $argc != 2 } {
 	puts "Wrong number of arguments."
         puts "Usage: $argv0 [hw_server ip] [fpga bitstream file]"
 } else {
+	exec ipcrm -a
 	puts "connection to [lindex $argv 0]"
 	if { [ catch {connect -host [lindex $argv 0]} err] } {
 		puts "Error connecting: $err"
@@ -20,4 +21,5 @@ if { $argc != 2 } {
 	}
 	puts "[fpga -state]"
 }
+
 

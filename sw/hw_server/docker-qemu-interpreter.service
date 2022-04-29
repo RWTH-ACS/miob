@@ -4,11 +4,11 @@ Requires=docker.service
 After=docker.service
 
 [Service]
+Type=forking
+TimeoutStartSec=infinity
 Restart=no
-ExecStart=docker run --rm --privileged aptman/qus -s -- -p x86_64
-ExecStop=
+ExecStart=/usr/bin/docker run --rm --privileged aptman/qus -s -- -p x86_64
 
 [Install]
-WantedBy=default.target
-
+WantedBy=multi-user.target
 
