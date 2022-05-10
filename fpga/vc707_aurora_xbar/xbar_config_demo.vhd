@@ -74,9 +74,9 @@ architecture Behavioral of xbar_config_demo is
     constant mi2_addr : std_logic_vector(31 downto 0) := x"0000_0048";
     constant mi3_config : std_logic_vector(31 downto 0) := x"0000_0002";
     constant mi3_addr : std_logic_vector(31 downto 0) := x"0000_004C";
-    constant mi4_config : std_logic_vector(31 downto 0) := x"0000_0000";
+    constant mi4_config : std_logic_vector(31 downto 0) := x"0000_0005"; --add padding
     constant mi4_addr : std_logic_vector(31 downto 0) := x"0000_0050";
-    constant mi5_config : std_logic_vector(31 downto 0) := x"0000_0001";
+    constant mi5_config : std_logic_vector(31 downto 0) := x"0000_0004"; --remove last word
     constant mi5_addr : std_logic_vector(31 downto 0) := x"0000_0054";
     constant mi6_config : std_logic_vector(31 downto 0) := x"0000_0002";
     constant mi6_addr : std_logic_vector(31 downto 0) := x"0000_0058";
