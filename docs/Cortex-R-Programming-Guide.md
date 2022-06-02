@@ -36,13 +36,23 @@ Install Vitis 2021.2
     - Debug Type: :Single Application Project
     - Connection -> New:
         - Host: `miob-3.acs-lab.eonerc.rwth-aachen.de`
+    - make sure in Application `psu_cortexr5_0` is selected
+    - make sure in Target Setup `reset RPU` is selected
 12. Run/Debug
 13. For printf via IDE: Console->Display Selected Console->TCF Debug [...] Core 0
 
-To read stdout from UART0:
+To read stdout from UART0 on the raspberry:
 
 ```sh
 sudo picocom --baud 115200 --flow n /dev/ttyUSB0
+```
+## Use Vitis running on a VM
+
+If you installed Vitis in a VM you can use X-Forwarding to use it:
+```
+ssh -Y user@address
+source /path/to/vitis/Vitis/2021.2/settings64.sh
+/path/to/vitis/Vitis/2021.2/bin/vitis
 ```
 
 ## Rust
