@@ -1,0 +1,41 @@
+This README file contains information on the contents of the meta-miob layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+
+  URI: <first dependency>
+  branch: <branch name>
+
+  URI: <second dependency>
+  branch: <branch name>
+
+  .
+  .
+  .
+
+Patches
+=======
+
+Please submit any patches against the meta-miob layer to the xxxx mailing list (xxxx@zzzz.org)
+and cc: the maintainer:
+
+Maintainer: Niklas Eiling <niklas.eiling@eonerc.rwth-aachen.de>
+
+Table of Contents
+=================
+
+  I. Adding the meta-miob layer to your build
+ II. Misc
+
+
+I. Adding the meta-miob layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-miob'
+
+II. Misc
+========
+
+--- replace with specific information about the meta-miob layer ---
