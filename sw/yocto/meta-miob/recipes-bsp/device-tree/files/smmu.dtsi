@@ -1,0 +1,15 @@
+/* Activate SMMU */
+&smmu {
+    status = "okay";
+};
+
+/* Derivation of Stream IDs:
+	TBU Nr of S_AXI_HPC[0/1]_FPD: 0 -> 0b00000 
+	Master ID of S_AXI_HPC0_FPD: 0b1000
+	AXI ID of first Master: 0b00 0000
+	-> 0x200
+   Activate IOMMUs für AXI DMA with most master interfaces (scatter gather with separate data interfaces) as per Xilinx Wiki:
+*/
+&axi_dma_0 {
+    iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x202>;
+};
