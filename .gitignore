@@ -1,4 +1,4 @@
 *.bda
 fpga/*/ipshared
-
+*.swp
 .directory
