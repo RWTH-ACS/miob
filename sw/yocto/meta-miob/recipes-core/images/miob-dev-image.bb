@@ -40,5 +40,4 @@ MIOB_BASE_INSTALL = "ntp \
                      vim \
                      openvpn"
 
-CORE_IMAGE_EXTRA_INSTALL_append = " ${MIOB_BASE_INSTALL} \
-                                    ${MIOB_DOCKER_INSTALL}"
+CORE_IMAGE_EXTRA_INSTALL_append = " ${MIOB_BASE_INSTALL}"
