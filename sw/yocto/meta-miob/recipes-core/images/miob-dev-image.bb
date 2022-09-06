@@ -17,18 +17,28 @@ IMAGE_FEATURES_append = " debug-tweaks \
                           petalinux-networking-debug \
                           petalinux-utils \
                           petalinux-lmsensors \
-                          fpga-manager \
-                          petalinux-ocicontainers"
+                          fpga-manager"
+
+### Add package management
+IMAGE_FEATURES_append = " package-management"
+PACKAGE_CLASSES = "package_rpm"
+PACKAGE_FEED_URIS = "http://package-repo.acs-lab.eonerc.rwth-aachen.de/miob-dev"
+PACKAGE_FEED_BASE_PATHS = "rpm"
+PACKAGE_FEED_ARCHS = "aarch64"
 
 # EXTRA RECIPES
 ## Select recipes from meta-oe to install on top of the base image
-CORE_IMAGE_EXTRA_INSTALL_append = "ntp \
-                                   ldd \
-                                   htop \
-                                   can-utils \
-                                   cmake \
-                                   net-snmp \
-                                   git \
-                                   sssd \
-                                   autofs \
-                                   vim"
+MIOB_BASE_INSTALL = "ntp \
+                     ldd \
+                     htop \
+                     can-utils \
+                     cmake \
+                     net-snmp \
+                     git \
+                     sssd \
+                     autofs \
+                     vim \
+                     openvpn"
+
+CORE_IMAGE_EXTRA_INSTALL_append = " ${MIOB_BASE_INSTALL} \
+                                    ${MIOB_DOCKER_INSTALL}"
