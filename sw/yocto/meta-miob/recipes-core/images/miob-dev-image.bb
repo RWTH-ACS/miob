@@ -39,6 +39,9 @@ MIOB_BASE_INSTALL = "dhcpcd \
                      sssd \
                      autofs \
                      vim \
-                     openvpn"
+                     openvpn \
+                     dnf"
+MIOB_EXTRA_INSTALL = "vfiotest"
 
-CORE_IMAGE_EXTRA_INSTALL_append = " ${MIOB_BASE_INSTALL}"
+CORE_IMAGE_EXTRA_INSTALL_append = " ${MIOB_BASE_INSTALL} \
+                                    ${MIOB_EXTRA_INSTALL}"
