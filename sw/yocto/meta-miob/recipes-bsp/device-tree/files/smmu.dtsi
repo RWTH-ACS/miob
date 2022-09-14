@@ -12,5 +12,5 @@
 */
 &axi_dma_0 {
     /*iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x202>;*/
-    iommus = <&smmu 0x200>;
+    iommus = <&smmu 0x200>, <&smmu 0x240>;
 };
