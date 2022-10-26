@@ -22,7 +22,7 @@ IMAGE_FEATURES_append = " debug-tweaks \
 ### Add package management
 IMAGE_FEATURES_append = " package-management"
 PACKAGE_CLASSES = "package_rpm"
-PACKAGE_FEED_URIS = "http://package.fein-aachen.org/yocto"
+PACKAGE_FEED_URIS = "http://packages.fein-aachen.org/yocto"
 PACKAGE_FEED_BASE_PATHS = "rpm"
 PACKAGE_FEED_ARCHS = "aarch64"
 
