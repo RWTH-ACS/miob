@@ -1,0 +1,22 @@
+--- tools/libipmi/fmc_eeprom.py  (original)
++++ tools/libipmi/fmc_eeprom.py  (refactored)
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python
++#!/usr/bin/python3
+
+ from ctypes import *
+ import array
+@@ -367,10 +367,10 @@
+     ipmi_close_file()
+
+     test = open('test.out', 'r').read()
+-    print ipmi_get_mfg_date(test)
++    print(ipmi_get_mfg_date(test))
+     d = ipmi_get_internal_use_data(test)
+     for v in d:
+-        print hex(v)
++        print(hex(v))
+
+ if __name__ == "__main__":
+     main()
+
