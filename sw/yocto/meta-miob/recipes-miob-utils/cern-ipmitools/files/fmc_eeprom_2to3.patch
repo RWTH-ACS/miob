@@ -6,6 +6,50 @@
 
  from ctypes import *
  import array
+@@ -121,24 +121,24 @@ class BoardInfoArea:
+         self.struct.mfg_date0 = c_ubyte(val[3])
+ 
+     def set_manufacturer(self, data):
+-        self.struct.mfgr_data = c_char_p(data)
+-        self.struct.mfgr_typelen = (len(bytearray(data)) & 0x3f) | (0x3 << 6)
++        self.struct.mfgr_data = c_char_p(str.encode(data))
++        self.struct.mfgr_typelen = (len(str.encode(data)) & 0x3f) | (0x3 << 6)
+ 
+     def set_product_name(self, data):
+-        self.struct.product_data = c_char_p(data)
+-        self.struct.product_typelen = (len(bytearray(data)) & 0x3f) | (0x3 << 6)
++        self.struct.product_data = c_char_p(str.encode(data))
++        self.struct.product_typelen = (len(str.encode(data)) & 0x3f) | (0x3 << 6)
+ 
+     def set_serial_number(self, data):
+-        self.struct.serial_data = c_char_p(data)
+-        self.struct.serial_typelen = (len(bytearray(data)) & 0x3f) | (0x3 << 6)
++        self.struct.serial_data = c_char_p(str.encode(data))
++        self.struct.serial_typelen = (len(str.encode(data)) & 0x3f) | (0x3 << 6)
+ 
+     def set_part_number(self, data):
+-        self.struct.partnum_data = c_char_p(data)
+-        self.struct.partnum_typelen = (len(bytearray(data)) & 0x3f) | (0x3 << 6)
++        self.struct.partnum_data = c_char_p(str.encode(data))
++        self.struct.partnum_typelen = (len(str.encode(data)) & 0x3f) | (0x3 << 6)
+ 
+     def set_fru_file_id(self, data):
+-        self.struct.fru_fid_data = c_char_p(data)
+-        self.struct.fru_fid_typelen = (len(bytearray(data)) & 0x3f) | (0x3 << 6)
++        self.struct.fru_fid_data = c_char_p(str.encode(data))
++        self.struct.fru_fid_typelen = (len(str.encode(data)) & 0x3f) | (0x3 << 6)
+ 
+ 
+ class DCLoadRecord:
+@@ -308,7 +308,7 @@ class OEMRecord:
+ 
+ 
+ def ipmi_open_file(name):
+-    lib.ipmi_file_open(c_char_p(name))
++    lib.ipmi_file_open(c_char_p(str.encode(name)))
+ 
+ def ipmi_close_file():
+     lib.ipmi_file_close()
 @@ -367,10 +367,10 @@
      ipmi_close_file()
 

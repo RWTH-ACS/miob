@@ -42,7 +42,8 @@ MIOB_BASE_INSTALL = "dhcpcd \
                      openvpn \
                      dnf"
 MIOB_EXTRA_INSTALL = "vfiotest \
-                      peekpoke"
+                      peekpoke \
+                      fmceeprom-write"
 
 CORE_IMAGE_EXTRA_INSTALL_append = " ${MIOB_BASE_INSTALL} \
                                     ${MIOB_EXTRA_INSTALL}"

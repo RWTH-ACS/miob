@@ -11,9 +11,8 @@ RDEPENDS_${PN} += "python3-core"
 FILES_${PN} = "\
         ${bindir}/fru-dump \
         ${bindir}/fmc-mem \
-        ${libdir}/libipmi.so \
-        ${libdir}/libipmi.so.1 \
         ${bindir}/fmc/libipmi/fmc_eeprom.py \
+        ${bindir}/fmc/libipmi/libipmi.so \
 "
 
 S = "${WORKDIR}/fmc-bus-master/tools"
@@ -21,13 +20,11 @@ S = "${WORKDIR}/fmc-bus-master/tools"
 TARGET_CC_ARCH += "${LDFLAGS}"
 
 do_install() {
-    install -d ${D}${libdir}
-    install -m 0644 libipmi/libipmi.so ${D}${libdir}/libipmi.so.1
-    ln -s libipmi.so.1 ${D}${libdir}/libipmi.so
     install -d ${D}${bindir}
     install -m 0755 fru-dump ${D}${bindir}
     install -m 0755 fmc-mem ${D}${bindir}
     install -d ${D}${bindir}/fmc/libipmi
     install -m 0755 libipmi/fmc_eeprom.py ${D}${bindir}/fmc/libipmi/
+    install -m 0644 libipmi/libipmi.so ${D}${bindir}/fmc/libipmi/
 }
 
