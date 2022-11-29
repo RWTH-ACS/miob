@@ -1,0 +1,838 @@
+DRAFT 1.2
+GRAPHICS: 
+    CANVAS_WIDTH: 1195
+    CANVAS_HEIGHT: 487
+    CURRENT_SUBSYSTEM_IDX: 0
+    DEFAULT_VIEW_MODE: 3
+    DEFAULT_ZOOM: 93
+    DEFAULT_TOP_LEFT_POINT: 26,175
+DATA: 
+    TITLE: Test Circuit
+    CREATED: May 9, 2022 (nei)
+    LAST-MODIFIED: May 9, 2022 (nei)
+    TIME-STEP: 5.0E-5
+    FINISH-TIME: 0.2
+    RTDS-RACK: 9
+    COMPILE-MODE: PRIORITY
+    DISTRIBUTION_MODE: 0
+    RTDS REAL-TIME: Yes 
+COMPONENT_ENUMERATION_START:
+
+COMPONENT_ENUMERATION_END:
+SUBSYSTEM-START:
+SUBSYSTEM-TAB-NAME: 
+SUBSYSTEM-CANVAS-SIZE:3000,2000
+SUBSYSTEM-PRINT-LAYOUT:PORTRAIT
+SUBSYSTEM-PAPER-TYPE:LETTER
+SUBSYSTEM-COMPONENTS:
+RUNTIME-OVERLAY-START: view VIEW-TYPE: DRAFT-VIEW VIEW-ID: test
+RUNTIME-OVERLAY-END:
+COMPONENT_TYPE=wirelabel
+	208 240 0 0 3
+	PARAMETERS-START:
+	Name	:OUT1#
+	COL	:BLUE
+	Monitor	:Yes
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_SRCABSPH
+	176 240 0 0 5
+	PARAMETERS-START:
+	WType	:Sine
+	Units	:volts
+	Duty	:50
+	ctrlGrp	:1
+	Pri	:3
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_SLIDER
+	112 208 0 0 5
+	PARAMETERS-START:
+	Name	:MAG#
+	Init	:50
+	Max	:100
+	Min	:0.0
+	Units	:volts
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_SLIDER
+	48 240 0 0 5
+	PARAMETERS-START:
+	Name	:FREQ#
+	Init	:0.0
+	Max	:1.0
+	Min	:0.0
+	Units	:Hz
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	112 240 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:32
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	144 240 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:0
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_CONSTANT
+	112 272 0 0 1
+	PARAMETERS-START:
+	Val	:0.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=wirelabel
+	208 432 0 0 3
+	PARAMETERS-START:
+	Name	:Out2w
+	COL	:BLUE
+	Monitor	:Yes
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	208 432 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:0
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_ICONST
+	144 432 0 0 1
+	PARAMETERS-START:
+	Val	:2
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=wirelabel
+	208 464 0 0 3
+	PARAMETERS-START:
+	Name	:Out3w
+	COL	:BLUE
+	Monitor	:Yes
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	208 464 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:0
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_ICONST
+	144 464 0 0 1
+	PARAMETERS-START:
+	Val	:3
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=wirelabel
+	208 496 0 0 3
+	PARAMETERS-START:
+	Name	:Out4w
+	COL	:BLUE
+	Monitor	:Yes
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	208 496 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:0
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_ICONST
+	144 496 0 0 1
+	PARAMETERS-START:
+	Val	:4
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=wirelabel
+	208 528 0 0 3
+	PARAMETERS-START:
+	Name	:Out5w
+	COL	:BLUE
+	Monitor	:Yes
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	208 528 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:0
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_ICONST
+	144 528 0 0 1
+	PARAMETERS-START:
+	Val	:5
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=wirelabel
+	208 560 0 0 3
+	PARAMETERS-START:
+	Name	:Out6w
+	COL	:BLUE
+	Monitor	:Yes
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=WIRE
+	208 560 0 0 6
+	PARAMETERS-START:
+	x1	:-32
+	y1	:0
+	x2	:0
+	y2	:0
+	COL	:RED
+	LW	:1.0
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=rtds_sharc_ctl_ICONST
+	144 560 0 0 1
+	PARAMETERS-START:
+	Val	:6
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+COMPONENT_TYPE=_rtds_Aurora.def
+	912 432 0 0 520
+	PARAMETERS-START:
+	Name	:AuroraLnkX#
+	Port	:24
+	ctrlGrp	:1
+	Pri	:10
+	enableSeqNum	:No
+	seqNumBlocking	:No
+	numVarsToAURORA	:31
+	out1	:from_opal
+	SetTypeToAURORA1	:Int
+	out2	:Out2w
+	SetTypeToAURORA2	:Int
+	out3	:Out3w
+	SetTypeToAURORA3	:Int
+	out4	:Out4w#
+	SetTypeToAURORA4	:Int
+	out5	:Out5w#
+	SetTypeToAURORA5	:Int
+	out6	:Out6w#
+	SetTypeToAURORA6	:Int
+	out7	:Out2w#
+	SetTypeToAURORA7	:Int
+	out8	:Out3w#
+	SetTypeToAURORA8	:Int
+	out9	:Out4w#
+	SetTypeToAURORA9	:Int
+	out10	:Out5w#
+	SetTypeToAURORA10	:Int
+	out11	:Out6w#
+	SetTypeToAURORA11	:Int
+	out12	:Out2w#
+	SetTypeToAURORA12	:Int
+	out13	:Out3w#
+	SetTypeToAURORA13	:Int
+	out14	:Out4w#
+	SetTypeToAURORA14	:Int
+	out15	:Out5w#
+	SetTypeToAURORA15	:Int
+	out16	:Out6w#
+	SetTypeToAURORA16	:Int
+	out17	:Out2w#
+	SetTypeToAURORA17	:Int
+	out18	:Out3w#
+	SetTypeToAURORA18	:Int
+	out19	:Out4w#
+	SetTypeToAURORA19	:Int
+	out20	:Out5w#
+	SetTypeToAURORA20	:Int
+	out21	:Out6w#
+	SetTypeToAURORA21	:Int
+	out22	:Out2w#
+	SetTypeToAURORA22	:Int
+	out23	:Out3w#
+	SetTypeToAURORA23	:Int
+	out24	:Out4w#
+	SetTypeToAURORA24	:Int
+	out25	:Out5w#
+	SetTypeToAURORA25	:Int
+	out26	:Out6w#
+	SetTypeToAURORA26	:Int
+	out27	:Out2w#
+	SetTypeToAURORA27	:Int
+	out28	:Out3w#
+	SetTypeToAURORA28	:Int
+	out29	:Out4w#
+	SetTypeToAURORA29	:Int
+	out30	:Out5w#
+	SetTypeToAURORA30	:Int
+	out31	:Out6w#
+	SetTypeToAURORA31	:Int
+	out32	:OUT1
+	SetTypeToAURORA32	:Int
+	out33	:Out33w#
+	SetTypeToAURORA33	:Int
+	out34	:Out34w#
+	SetTypeToAURORA34	:Int
+	out35	:Out35w#
+	SetTypeToAURORA35	:Int
+	out36	:Out36w#
+	SetTypeToAURORA36	:Int
+	out37	:Out37w#
+	SetTypeToAURORA37	:Int
+	out38	:Out38w#
+	SetTypeToAURORA38	:Int
+	out39	:Out39w#
+	SetTypeToAURORA39	:Int
+	out40	:Out40w#
+	SetTypeToAURORA40	:Int
+	out41	:Out41w#
+	SetTypeToAURORA41	:Int
+	out42	:Out42w#
+	SetTypeToAURORA42	:Int
+	out43	:Out43w#
+	SetTypeToAURORA43	:Int
+	out44	:Out44w#
+	SetTypeToAURORA44	:Int
+	out45	:Out45w#
+	SetTypeToAURORA45	:Int
+	out46	:Out46w#
+	SetTypeToAURORA46	:Int
+	out47	:Out47w#
+	SetTypeToAURORA47	:Int
+	out48	:Out48w#
+	SetTypeToAURORA48	:Int
+	out49	:Out49w#
+	SetTypeToAURORA49	:Int
+	out50	:Out50w#
+	SetTypeToAURORA50	:Int
+	out51	:Out51w#
+	SetTypeToAURORA51	:Int
+	out52	:Out52w#
+	SetTypeToAURORA52	:Int
+	out53	:Out53w#
+	SetTypeToAURORA53	:Int
+	out54	:Out54w#
+	SetTypeToAURORA54	:Int
+	out55	:Out55w#
+	SetTypeToAURORA55	:Int
+	out56	:Out56w#
+	SetTypeToAURORA56	:Int
+	out57	:Out57w#
+	SetTypeToAURORA57	:Int
+	out58	:Out58w#
+	SetTypeToAURORA58	:Int
+	out59	:Out59w#
+	SetTypeToAURORA59	:Int
+	out60	:Out60w#
+	SetTypeToAURORA60	:Int
+	out61	:Out61w#
+	SetTypeToAURORA61	:Int
+	out62	:Out62w#
+	SetTypeToAURORA62	:Int
+	out63	:Out63w#
+	SetTypeToAURORA63	:Int
+	out64	:Out64w#
+	SetTypeToAURORA64	:Int
+	out65	:Out65w#
+	SetTypeToAURORA65	:Int
+	out66	:Out66w#
+	SetTypeToAURORA66	:Int
+	out67	:Out67w#
+	SetTypeToAURORA67	:Int
+	out68	:Out68w#
+	SetTypeToAURORA68	:Int
+	out69	:Out69w#
+	SetTypeToAURORA69	:Int
+	out70	:Out70w#
+	SetTypeToAURORA70	:Int
+	out71	:Out71w#
+	SetTypeToAURORA71	:Int
+	out72	:Out72w#
+	SetTypeToAURORA72	:Int
+	out73	:Out73w#
+	SetTypeToAURORA73	:Int
+	out74	:Out74w#
+	SetTypeToAURORA74	:Int
+	out75	:Out75w#
+	SetTypeToAURORA75	:Int
+	out76	:Out76w#
+	SetTypeToAURORA76	:Int
+	out77	:Out77w#
+	SetTypeToAURORA77	:Int
+	out78	:Out78w#
+	SetTypeToAURORA78	:Int
+	out79	:Out79w#
+	SetTypeToAURORA79	:Int
+	out80	:Out80w#
+	SetTypeToAURORA80	:Int
+	out81	:Out81w#
+	SetTypeToAURORA81	:Int
+	out82	:Out82w#
+	SetTypeToAURORA82	:Int
+	out83	:Out83w#
+	SetTypeToAURORA83	:Int
+	out84	:Out84w#
+	SetTypeToAURORA84	:Int
+	out85	:Out85w#
+	SetTypeToAURORA85	:Int
+	out86	:Out86w#
+	SetTypeToAURORA86	:Int
+	out87	:Out87w#
+	SetTypeToAURORA87	:Int
+	out88	:Out88w#
+	SetTypeToAURORA88	:Int
+	out89	:Out89w#
+	SetTypeToAURORA89	:Int
+	out90	:Out90w#
+	SetTypeToAURORA90	:Int
+	out91	:Out91w#
+	SetTypeToAURORA91	:Int
+	out92	:Out92w#
+	SetTypeToAURORA92	:Int
+	out93	:Out93w#
+	SetTypeToAURORA93	:Int
+	out94	:Out94w#
+	SetTypeToAURORA94	:Int
+	out95	:Out95w#
+	SetTypeToAURORA95	:Int
+	out96	:Out96w#
+	SetTypeToAURORA96	:Int
+	out97	:Out97w#
+	SetTypeToAURORA97	:Int
+	out98	:Out98w#
+	SetTypeToAURORA98	:Int
+	out99	:Out99w#
+	SetTypeToAURORA99	:Int
+	out100	:Out100w#
+	SetTypeToAURORA100	:Int
+	out101	:Out101w#
+	SetTypeToAURORA101	:Int
+	out102	:Out102w#
+	SetTypeToAURORA102	:Int
+	out103	:Out103w#
+	SetTypeToAURORA103	:Int
+	out104	:Out104w#
+	SetTypeToAURORA104	:Int
+	out105	:Out105w#
+	SetTypeToAURORA105	:Int
+	out106	:Out106w#
+	SetTypeToAURORA106	:Int
+	out107	:Out107w#
+	SetTypeToAURORA107	:Int
+	out108	:Out108w#
+	SetTypeToAURORA108	:Int
+	out109	:Out109w#
+	SetTypeToAURORA109	:Int
+	out110	:Out110w#
+	SetTypeToAURORA110	:Int
+	out111	:Out111w#
+	SetTypeToAURORA111	:Int
+	out112	:Out112w#
+	SetTypeToAURORA112	:Int
+	out113	:Out113w#
+	SetTypeToAURORA113	:Int
+	out114	:Out114w#
+	SetTypeToAURORA114	:Int
+	out115	:Out115w#
+	SetTypeToAURORA115	:Int
+	out116	:Out116w#
+	SetTypeToAURORA116	:Int
+	out117	:Out117w#
+	SetTypeToAURORA117	:Int
+	out118	:Out118w#
+	SetTypeToAURORA118	:Int
+	out119	:Out119w#
+	SetTypeToAURORA119	:Int
+	out120	:Out120w#
+	SetTypeToAURORA120	:Int
+	out121	:Out121w#
+	SetTypeToAURORA121	:Int
+	out122	:Out122w#
+	SetTypeToAURORA122	:Int
+	out123	:Out123w#
+	SetTypeToAURORA123	:Int
+	out124	:Out124w#
+	SetTypeToAURORA124	:Int
+	out125	:Out125w#
+	SetTypeToAURORA125	:Int
+	out126	:Out126w#
+	SetTypeToAURORA126	:Int
+	out127	:Out127w#
+	SetTypeToAURORA127	:Int
+	out128	:Out128w#
+	SetTypeToAURORA128	:Int
+	numVarsFromAURORA	:32
+	in1	:from_opal
+	SetTypeFrAURORA1	:Int
+	in2	:from_rtds
+	SetTypeFrAURORA2	:Int
+	in3	:in3w
+	SetTypeFrAURORA3	:Float
+	in4	:in4w#
+	SetTypeFrAURORA4	:Float
+	in5	:in5w#
+	SetTypeFrAURORA5	:Float
+	in6	:in6w#
+	SetTypeFrAURORA6	:Float
+	in7	:in7w#
+	SetTypeFrAURORA7	:Float
+	in8	:in8w#
+	SetTypeFrAURORA8	:Float
+	in9	:in9w#
+	SetTypeFrAURORA9	:Float
+	in10	:in10w#
+	SetTypeFrAURORA10	:Float
+	in11	:in11w#
+	SetTypeFrAURORA11	:Float
+	in12	:in12w#
+	SetTypeFrAURORA12	:Float
+	in13	:in13w#
+	SetTypeFrAURORA13	:Float
+	in14	:in14w#
+	SetTypeFrAURORA14	:Float
+	in15	:in15w#
+	SetTypeFrAURORA15	:Float
+	in16	:in16w#
+	SetTypeFrAURORA16	:Float
+	in17	:in17w#
+	SetTypeFrAURORA17	:Float
+	in18	:in18w#
+	SetTypeFrAURORA18	:Float
+	in19	:in19w#
+	SetTypeFrAURORA19	:Float
+	in20	:in20w#
+	SetTypeFrAURORA20	:Float
+	in21	:in21w#
+	SetTypeFrAURORA21	:Float
+	in22	:in22w#
+	SetTypeFrAURORA22	:Float
+	in23	:in23w#
+	SetTypeFrAURORA23	:Float
+	in24	:in24w#
+	SetTypeFrAURORA24	:Float
+	in25	:in25w#
+	SetTypeFrAURORA25	:Float
+	in26	:in26w#
+	SetTypeFrAURORA26	:Float
+	in27	:in27w#
+	SetTypeFrAURORA27	:Float
+	in28	:in28w#
+	SetTypeFrAURORA28	:Float
+	in29	:in29w#
+	SetTypeFrAURORA29	:Float
+	in30	:in30w#
+	SetTypeFrAURORA30	:Float
+	in31	:in31w#
+	SetTypeFrAURORA31	:Float
+	in32	:in32w#
+	SetTypeFrAURORA32	:Int
+	in33	:in33w#
+	SetTypeFrAURORA33	:Int
+	in34	:in34w#
+	SetTypeFrAURORA34	:Int
+	in35	:in35w#
+	SetTypeFrAURORA35	:Int
+	in36	:in36w#
+	SetTypeFrAURORA36	:Int
+	in37	:in37w#
+	SetTypeFrAURORA37	:Int
+	in38	:in38w#
+	SetTypeFrAURORA38	:Int
+	in39	:in39w#
+	SetTypeFrAURORA39	:Int
+	in40	:in40w#
+	SetTypeFrAURORA40	:Int
+	in41	:in41w#
+	SetTypeFrAURORA41	:Int
+	in42	:in42w#
+	SetTypeFrAURORA42	:Int
+	in43	:in43w#
+	SetTypeFrAURORA43	:Int
+	in44	:in44w#
+	SetTypeFrAURORA44	:Int
+	in45	:in45w#
+	SetTypeFrAURORA45	:Int
+	in46	:in46w#
+	SetTypeFrAURORA46	:Int
+	in47	:in47w#
+	SetTypeFrAURORA47	:Int
+	in48	:in48w#
+	SetTypeFrAURORA48	:Int
+	in49	:in49w#
+	SetTypeFrAURORA49	:Int
+	in50	:in50w#
+	SetTypeFrAURORA50	:Int
+	in51	:in51w#
+	SetTypeFrAURORA51	:Int
+	in52	:in52w#
+	SetTypeFrAURORA52	:Int
+	in53	:in53w#
+	SetTypeFrAURORA53	:Int
+	in54	:in54w#
+	SetTypeFrAURORA54	:Int
+	in55	:in55w#
+	SetTypeFrAURORA55	:Int
+	in56	:in56w#
+	SetTypeFrAURORA56	:Int
+	in57	:in57w#
+	SetTypeFrAURORA57	:Int
+	in58	:in58w#
+	SetTypeFrAURORA58	:Int
+	in59	:in59w#
+	SetTypeFrAURORA59	:Int
+	in60	:in60w#
+	SetTypeFrAURORA60	:Int
+	in61	:in61w#
+	SetTypeFrAURORA61	:Int
+	in62	:in62w#
+	SetTypeFrAURORA62	:Int
+	in63	:in63w#
+	SetTypeFrAURORA63	:Int
+	in64	:in64w#
+	SetTypeFrAURORA64	:Int
+	in65	:in65w#
+	SetTypeFrAURORA65	:Int
+	in66	:in66w#
+	SetTypeFrAURORA66	:Int
+	in67	:in67w#
+	SetTypeFrAURORA67	:Int
+	in68	:in68w#
+	SetTypeFrAURORA68	:Int
+	in69	:in69w#
+	SetTypeFrAURORA69	:Int
+	in70	:in70w#
+	SetTypeFrAURORA70	:Int
+	in71	:in71w#
+	SetTypeFrAURORA71	:Int
+	in72	:in72w#
+	SetTypeFrAURORA72	:Int
+	in73	:in73w#
+	SetTypeFrAURORA73	:Int
+	in74	:in74w#
+	SetTypeFrAURORA74	:Int
+	in75	:in75w#
+	SetTypeFrAURORA75	:Int
+	in76	:in76w#
+	SetTypeFrAURORA76	:Int
+	in77	:in77w#
+	SetTypeFrAURORA77	:Int
+	in78	:in78w#
+	SetTypeFrAURORA78	:Int
+	in79	:in79w#
+	SetTypeFrAURORA79	:Int
+	in80	:in80w#
+	SetTypeFrAURORA80	:Int
+	in81	:in81w#
+	SetTypeFrAURORA81	:Int
+	in82	:in82w#
+	SetTypeFrAURORA82	:Int
+	in83	:in83w#
+	SetTypeFrAURORA83	:Int
+	in84	:in84w#
+	SetTypeFrAURORA84	:Int
+	in85	:in85w#
+	SetTypeFrAURORA85	:Int
+	in86	:in86w#
+	SetTypeFrAURORA86	:Int
+	in87	:in87w#
+	SetTypeFrAURORA87	:Int
+	in88	:in88w#
+	SetTypeFrAURORA88	:Int
+	in89	:in89w#
+	SetTypeFrAURORA89	:Int
+	in90	:in90w#
+	SetTypeFrAURORA90	:Int
+	in91	:in91w#
+	SetTypeFrAURORA91	:Int
+	in92	:in92w#
+	SetTypeFrAURORA92	:Int
+	in93	:in93w#
+	SetTypeFrAURORA93	:Int
+	in94	:in94w#
+	SetTypeFrAURORA94	:Int
+	in95	:in95w#
+	SetTypeFrAURORA95	:Int
+	in96	:in96w#
+	SetTypeFrAURORA96	:Int
+	in97	:in97w#
+	SetTypeFrAURORA97	:Int
+	in98	:in98w#
+	SetTypeFrAURORA98	:Int
+	in99	:in99w#
+	SetTypeFrAURORA99	:Int
+	in100	:in100w#
+	SetTypeFrAURORA100	:Int
+	in101	:in101w#
+	SetTypeFrAURORA101	:Int
+	in102	:in102w#
+	SetTypeFrAURORA102	:Int
+	in103	:in103w#
+	SetTypeFrAURORA103	:Int
+	in104	:in104w#
+	SetTypeFrAURORA104	:Int
+	in105	:in105w#
+	SetTypeFrAURORA105	:Int
+	in106	:in106w#
+	SetTypeFrAURORA106	:Int
+	in107	:in107w#
+	SetTypeFrAURORA107	:Int
+	in108	:in108w#
+	SetTypeFrAURORA108	:Int
+	in109	:in109w#
+	SetTypeFrAURORA109	:Int
+	in110	:in110w#
+	SetTypeFrAURORA110	:Int
+	in111	:in111w#
+	SetTypeFrAURORA111	:Int
+	in112	:in112w#
+	SetTypeFrAURORA112	:Int
+	in113	:in113w#
+	SetTypeFrAURORA113	:Int
+	in114	:in114w#
+	SetTypeFrAURORA114	:Int
+	in115	:in115w#
+	SetTypeFrAURORA115	:Int
+	in116	:in116w#
+	SetTypeFrAURORA116	:Int
+	in117	:in117w#
+	SetTypeFrAURORA117	:Int
+	in118	:in118w#
+	SetTypeFrAURORA118	:Int
+	in119	:in119w#
+	SetTypeFrAURORA119	:Int
+	in120	:in120w#
+	SetTypeFrAURORA120	:Int
+	in121	:in121w#
+	SetTypeFrAURORA121	:Int
+	in122	:in122w#
+	SetTypeFrAURORA122	:Int
+	in123	:in123w#
+	SetTypeFrAURORA123	:Int
+	in124	:in124w#
+	SetTypeFrAURORA124	:Int
+	in125	:in125w#
+	SetTypeFrAURORA125	:Int
+	in126	:in126w#
+	SetTypeFrAURORA126	:Int
+	in127	:in127w#
+	SetTypeFrAURORA127	:Int
+	in128	:in128w#
+	SetTypeFrAURORA128	:Int
+	PARAMETERS-END:
+	ENUMERATION:
+		true
+		0
+		Integer
+		#
+SUBSYSTEM-END:
