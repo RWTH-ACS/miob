@@ -74,13 +74,13 @@ architecture Behavioral of xbar_config_demo is
     constant mi2_addr : std_logic_vector(31 downto 0) := x"0000_0048";
     constant mi3_config : std_logic_vector(31 downto 0) := x"0000_0002";
     constant mi3_addr : std_logic_vector(31 downto 0) := x"0000_004C";
-    constant mi4_config : std_logic_vector(31 downto 0) := x"0000_0005"; --add padding
+    constant mi4_config : std_logic_vector(31 downto 0) := x"0000_0004";
     constant mi4_addr : std_logic_vector(31 downto 0) := x"0000_0050";
-    constant mi5_config : std_logic_vector(31 downto 0) := x"0000_0004"; --remove last word
+    constant mi5_config : std_logic_vector(31 downto 0) := x"8000_0000";
     constant mi5_addr : std_logic_vector(31 downto 0) := x"0000_0054";
-    constant mi6_config : std_logic_vector(31 downto 0) := x"0000_0002";
+    constant mi6_config : std_logic_vector(31 downto 0) := x"8000_0000";
     constant mi6_addr : std_logic_vector(31 downto 0) := x"0000_0058";
-    constant mi7_config : std_logic_vector(31 downto 0) := x"0000_0003";
+    constant mi7_config : std_logic_vector(31 downto 0) := x"8000_0000";
     constant mi7_addr : std_logic_vector(31 downto 0) := x"0000_005C";
     
     constant commit_control : std_logic_vector(31 downto 0) := b"00000000_00000000_00000000_00000010";
@@ -90,6 +90,7 @@ architecture Behavioral of xbar_config_demo is
     type STATE_T is (INIT, MIx_PROG, COMMIT, IDLE);
     signal cnt : integer := 0;
     signal state : STATE_T := INIT;
+    signal was_awready : std_logic := '0';
 begin
 process (M_AXI_ACLK, M_AXI_ARESETN, M_AXI_AWREADY, M_AXI_WREADY, M_AXI_BVALID,
          M_AXI_BRESP, M_AXI_ARREADY, M_AXI_RVALID, M_AXI_RRESP, M_AXI_RDATA, state, cnt) begin
@@ -107,6 +108,7 @@ process (M_AXI_ACLK, M_AXI_ARESETN, M_AXI_AWREADY, M_AXI_WREADY, M_AXI_BVALID,
                 M_AXI_ARVALID <= '0';
                 M_AXI_ARADDR <= (others => '0');
                 cnt <= 0;
+                was_awready <= '0';
                 state <= MIx_PROG;
             when MIx_PROG =>
                 M_AXI_WVALID <= '1';
@@ -138,8 +140,12 @@ process (M_AXI_ACLK, M_AXI_ARESETN, M_AXI_AWREADY, M_AXI_WREADY, M_AXI_BVALID,
                     M_AXI_WDATA <= MI7_CONFIG;
                 when others =>
                 end case;
-                if M_AXI_AWREADY = '1' and M_AXI_WREADY = '1' then
-                    if cnt = 7 then
+                if M_AXI_AWREADY = '1' then
+                    was_awready <= '1';
+                end if;
+                if (M_AXI_AWREADY = '1' or was_awready = '1') and M_AXI_WREADY = '1' then
+                    was_awready <= '0';
+                    if cnt = 4 then
                         state <= COMMIT;
                         cnt <= 0;
                     else
@@ -152,7 +158,10 @@ process (M_AXI_ACLK, M_AXI_ARESETN, M_AXI_AWREADY, M_AXI_WREADY, M_AXI_BVALID,
                 M_AXI_AWVALID <= '1';
                 M_AXI_AWADDR <= control_addr;
                 M_AXI_WDATA <= commit_control;
-                if M_AXI_AWREADY = '1' and M_AXI_WREADY = '1' then
+                if M_AXI_AWREADY = '1' then
+                    was_awready <= '1';
+                end if;
+                if (M_AXI_AWREADY = '1' or was_awready = '1') and M_AXI_WREADY = '1' then
                     state <= IDLE;
                 end if;
             when IDLE =>
@@ -161,7 +170,8 @@ process (M_AXI_ACLK, M_AXI_ARESETN, M_AXI_AWREADY, M_AXI_WREADY, M_AXI_BVALID,
                 M_AXI_WVALID <= '0';
                 M_AXI_WDATA <= (others => '0');
                 M_AXI_ARVALID <= '0';
-                M_AXI_ARADDR <= (others => '0');           
+                M_AXI_ARADDR <= (others => '0');
+                was_awready <= '0';      
                 cnt <= 0;
             end case;
         end if;
