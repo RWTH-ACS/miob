@@ -30,6 +30,11 @@ raspi-gpio set 24 dh
 raspi-gpio set 24 dl
 ```
 
+## Access Zynq Boot Shell from Raspberry
+```
+sudo picocom --baud 115200 --flow n /dev/ttyUSB0
+```
+
 ## Photos
 
 ![Front View](photos/miob_front.jpeg)
