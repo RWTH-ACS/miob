@@ -17,6 +17,19 @@ This repository contains the construction drawings, bill of materials, software 
   - [Kiosk Mode](./sw/kiosk/README.md)
 - [VILLAScontroller](./sw/villas-controller/README.md)
 
+## Control FPGA Power from Raspberry:
+
+```
+#Set pin as output
+raspi-gpio set 24 op
+
+#Turn off FPGA Power
+raspi-gpio set 24 dh
+
+#Turn on FPGA Power
+raspi-gpio set 24 dl
+```
+
 ## Photos
 
 ![Front View](photos/miob_front.jpeg)
