@@ -7,7 +7,7 @@ Index: 0.1-r0/vfiotest.c
  
  #define VFIO_CONTAINER 		"/dev/vfio/vfio"
 -#define AXIDMA_VFIO_GROUP 	"/dev/vfio/11"			// dmesg | grep group, look for axi dma address
-+#define AXIDMA_VFIO_GROUP 	"/dev/vfio/4"			// dmesg | grep group, look for axi dma address
++#define AXIDMA_VFIO_GROUP 	"/dev/vfio/2"			// dmesg | grep group, look for axi dma address
  #define AXIDMA_DEVICE		"a0000000.dma"			// the address for the device that is with the group
  
  #define DMA_TRANSFER_SIZE_4KPAGES	(1024)			// 4K pages
