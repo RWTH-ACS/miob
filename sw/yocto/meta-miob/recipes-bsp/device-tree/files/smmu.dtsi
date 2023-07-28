@@ -14,3 +14,8 @@
     /*iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x202>;*/
     iommus = <&smmu 0x200>, <&smmu 0x240>;
 };
+
+&axis_interconnect_0_xbar {
+    iommus = <&smmu 0x200>, <&smmu 0x240>;
+};
+
