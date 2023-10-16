@@ -40,7 +40,8 @@ MIOB_BASE_INSTALL = "dhcpcd \
                      autofs \
                      vim \
                      openvpn \
-                     dnf"
+                     dnf \
+                     clang"
 MIOB_EXTRA_INSTALL = "vfiotest \
                       peekpoke \
                       fmceeprom-write"
