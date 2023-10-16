@@ -19,3 +19,7 @@
     iommus = <&smmu 0x200>, <&smmu 0x240>;
 };
 
+/* set clock of SFP ports to 250 MHz */
+&si5328_clk {
+	clock-frequency = <0xEE6B280>;
+};
