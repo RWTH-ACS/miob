@@ -7,8 +7,7 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2021.1",
-      "validated": "true"
+      "tool_version": "2021.1"
     },
     "design_tree": {
       "aurora_8b10b_0": "",
@@ -26,10 +25,6 @@
         "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
         "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
         "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "300000000"
           }
@@ -50,10 +45,6 @@
         "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
         "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
         "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "250000000"
           }
@@ -65,10 +56,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -92,10 +79,10 @@
             "value": "4"
           },
           "C_LINE_RATE": {
-            "value": "2"
+            "value": "6.6"
           },
           "C_REFCLK_FREQUENCY": {
-            "value": "250"
+            "value": "132"
           },
           "C_REFCLK_SOURCE": {
             "value": "MGTREFCLK1 of Quad X0Y2"
@@ -119,8 +106,8 @@
       },
       "clk_wiz_1": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_1_clk_wiz_1_1",
-        "xci_path": "ip/design_1_clk_wiz_1_1/design_1_clk_wiz_1_1.xci",
+        "xci_name": "design_1_clk_wiz_1_0",
+        "xci_path": "ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xci",
         "inst_hier_path": "clk_wiz_1",
         "parameters": {
           "CLKIN1_JITTER_PS": {
@@ -246,7 +233,7 @@
                 "value_src": "ip_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_clk_wiz_1_1_clk_50mhz",
+                "value": "design_1_clk_wiz_1_0_clk_50mhz",
                 "value_src": "default_prop"
               }
             },
@@ -254,13 +241,7 @@
               "TDATA": {
                 "physical_name": "m_axis_tdata",
                 "direction": "O",
-                "left": "31",
-                "right": "0"
-              },
-              "TKEEP": {
-                "physical_name": "m_axis_tkeep",
-                "direction": "O",
-                "left": "1",
+                "left": "15",
                 "right": "0"
               },
               "TLAST": {
@@ -270,10 +251,6 @@
               "TVALID": {
                 "physical_name": "m_axis_tvalid",
                 "direction": "O"
-              },
-              "TREADY": {
-                "physical_name": "m_axis_tready",
-                "direction": "I"
               }
             }
           }
@@ -300,7 +277,7 @@
                 "value_src": "ip_prop"
               },
               "CLK_DOMAIN": {
-                "value": "design_1_clk_wiz_1_1_clk_50mhz",
+                "value": "design_1_clk_wiz_1_0_clk_50mhz",
                 "value_src": "default_prop"
               }
             }
