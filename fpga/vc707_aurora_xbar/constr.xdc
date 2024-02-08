@@ -124,3 +124,111 @@ set_property PACKAGE_PIN AP42 [get_ports {led_pins_tri_o[6]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {led_pins_tri_o[6]}]
 set_property PACKAGE_PIN AU39 [get_ports {led_pins_tri_o[7]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {led_pins_tri_o[7]}]
+
+#### BEGIN DINO ####
+
+# CONV L/S activate
+# Pull all CONV_OE to high to activate L/S outputs  (HPC0)
+#   CONV_OE      <-> FMC_LA20_N    <-> V34
+set_property PACKAGE_PIN V34 [get_ports {conv_oe[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {conv_oe[0]}]
+
+# RJ1 interface (HPC0)
+#    RJ1_CLK     <-> FMC_LA00_CC_P  <-> AD40
+#    RJ1_CLK_DE  <-> FMC_LA00_CC_N  <-> AD41
+#    RJ1_DATA    <-> FMC_LA05_P     <-> AF42
+#    RJ1_DATA_DE <-> FMC_LA05_N     <-> AG42
+#    RJ1_CONV    <-> FMC_LA02_P     <-> AK39
+#    RJ1_SCL     <-> SC5            <-> FMC_LA23_P
+#    RJ1_SDO     <-> SD5            <-> FMC_LA23_N
+set_property PACKAGE_PIN AD40 [get_ports serial_clk_1]
+set_property IOSTANDARD LVCMOS18 [get_ports serial_clk_1]
+set_property PACKAGE_PIN AD41 [get_ports {serial_clk_de[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[0]}]
+set_property PACKAGE_PIN AF42 [get_ports serial_data_1]
+set_property IOSTANDARD LVCMOS18 [get_ports serial_data_1]
+set_property PACKAGE_PIN AG42 [get_ports {serial_data_de[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[0]}]
+set_property PACKAGE_PIN AK39 [get_ports conv_1]
+set_property IOSTANDARD LVCMOS18 [get_ports conv_1]
+
+
+# RJ2 interface (HPC0)
+#    RJ2_CLK     <-> FMC_LA11_P  <-> Y42
+#    RJ2_CLK_DE  <-> FMC_LA11_N  <-> AA42
+#    RJ2_DATA    <-> FMC_LA07_P  <-> AC40
+#    RJ2_DATA_DE <-> FMC_LA07_N  <-> AC41
+#    RJ2_CONV    <-> FMC_LA15_P  <-> AC38
+#    RJ2_SCL     <-> SC7         <-> FMC_LA23_P
+#    RJ2_SDO     <-> SD7         <-> FMC_LA23_N
+set_property PACKAGE_PIN Y42 [get_ports serial_clk_2]
+set_property IOSTANDARD LVCMOS18 [get_ports serial_clk_2]
+set_property PACKAGE_PIN AA42 [get_ports {serial_clk_de[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[1]}]
+set_property PACKAGE_PIN AC40 [get_ports serial_data_2]
+set_property IOSTANDARD LVCMOS18 [get_ports serial_data_2]
+set_property PACKAGE_PIN AC41 [get_ports {serial_data_de[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[1]}]
+set_property PACKAGE_PIN AC38 [get_ports conv_2]
+set_property IOSTANDARD LVCMOS18 [get_ports conv_2]
+
+# RJ3 interface (HPC0)
+#    RJ3_CLK_DE  <-> FMC_LA25_N    <-> R34
+#    RJ3_DATA_DE <-> FMC_LA21_N    <-> P36
+set_property PACKAGE_PIN R34 [get_ports {serial_clk_de[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[2]}]
+set_property PACKAGE_PIN P36 [get_ports {serial_data_de[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[2]}]
+
+# RJ4 interface (HPC0)
+#    RJ4_CLK_DE  <-> FMC_LA31_P    <-> V39
+#    RJ4_DATA_DE <-> FMC_LA30_N    <-> R32
+set_property PACKAGE_PIN V39 [get_ports {serial_clk_de[3]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[3]}]
+set_property PACKAGE_PIN R32 [get_ports {serial_data_de[3]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[3]}]
+
+# RJ5 interface (HPC0)
+#    RJ5_CLK_DE  <-> FMC_LA06_N    <-> AE38
+#    RJ5_DATA_DE <-> FMC_LA01_CC_P <-> AF41
+set_property PACKAGE_PIN AE38 [get_ports {serial_clk_de[4]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[4]}]
+set_property PACKAGE_PIN AF41 [get_ports {serial_data_de[4]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[4]}]
+
+# RJ6 interface (HPC0)
+#    RJ6_CLK_DE  <-> FMC_LA04_N    <-> AL42
+#    RJ6_DATA_DE <-> FMC_LA03_N    <-> AK42
+set_property PACKAGE_PIN AL42 [get_ports {serial_clk_de[5]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[5]}]
+set_property PACKAGE_PIN AK42 [get_ports {serial_data_de[5]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[5]}]
+
+# RJ7 interface (HPC0)
+#    RJ7_CLK_DE  <-> FMC_LA28_N    <-> V36
+#    RJ7_DATA_DE <-> FMC_LA24_N    <-> T35
+set_property PACKAGE_PIN V36 [get_ports {serial_clk_de[6]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[6]}]
+set_property PACKAGE_PIN T35 [get_ports {serial_data_de[6]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[6]}]
+
+# RJ8 interface (HPC0)
+#    RJ8_CLK_DE  <-> FMC_LA33_N        <-> R37
+#    RJ8_DATA_DE <-> FMC_LA32_N        <-> P38
+set_property PACKAGE_PIN R37 [get_ports {serial_clk_de[7]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_clk_de[7]}]
+set_property PACKAGE_PIN P38 [get_ports {serial_data_de[7]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {serial_data_de[7]}]
+
+
+# I2C interface (HPC0)
+#   SDA     <-> FMC_LA23_N  <-> R39
+#   SCL     <-> FMC_LA23_P  <-> R38
+set_property PACKAGE_PIN R39 [get_ports I2C0_sda_io]
+set_property IOSTANDARD LVCMOS18 [get_ports I2C0_sda_io]
+set_property OFFCHIP_TERM NONE [get_ports I2C0_sda_io]
+set_property PULLUP true [get_ports I2C0_sda_io]
+set_property PACKAGE_PIN R38 [get_ports I2C0_scl_io]
+set_property IOSTANDARD LVCMOS18 [get_ports I2C0_scl_io]
+set_property OFFCHIP_TERM NONE [get_ports I2C0_scl_io]
+set_property PULLUP true [get_ports I2C0_scl_io]
