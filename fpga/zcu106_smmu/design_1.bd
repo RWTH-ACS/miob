@@ -7,7 +7,8 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2021.1"
+      "tool_version": "2021.1",
+      "validated": "true"
     },
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
@@ -48,7 +49,8 @@
         "s00_couplers": {},
         "s01_couplers": {},
         "m00_couplers": {}
-      }
+      },
+      "axi_dwidth_converter_0": ""
     },
     "components": {
       "zynq_ultra_ps_e_0": {
@@ -847,7 +849,7 @@
             "value": "128"
           },
           "PSU__SAXIGP1__DATA_WIDTH": {
-            "value": "32"
+            "value": "128"
           },
           "PSU__SD1_COHERENCY": {
             "value": "0"
@@ -2485,8 +2487,14 @@
           "C_DATA_DEPTH": {
             "value": "8192"
           },
+          "C_MON_TYPE": {
+            "value": "MIX"
+          },
           "C_NUM_MONITOR_SLOTS": {
             "value": "5"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "2"
           },
           "C_SLOT": {
             "value": "2"
@@ -2889,6 +2897,21 @@
             ]
           }
         }
+      },
+      "axi_dwidth_converter_0": {
+        "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
+        "xci_name": "design_1_axi_dwidth_converter_0_0",
+        "xci_path": "ip/design_1_axi_dwidth_converter_0_0/design_1_axi_dwidth_converter_0_0.xci",
+        "inst_hier_path": "axi_dwidth_converter_0",
+        "interface_ports": {
+          "S_AXI": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M_AXI"
+            ]
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2914,8 +2937,14 @@
       "axi_dma_0_M_AXI_SG": {
         "interface_ports": [
           "axi_dma_0/M_AXI_SG",
-          "zynq_ultra_ps_e_0/S_AXI_HPC1_FPD",
+          "axi_dwidth_converter_0/S_AXI",
           "system_ila_0/SLOT_4_AXI"
+        ]
+      },
+      "axi_dwidth_converter_0_M_AXI": {
+        "interface_ports": [
+          "zynq_ultra_ps_e_0/S_AXI_HPC1_FPD",
+          "axi_dwidth_converter_0/M_AXI"
         ]
       },
       "axis_interconnect_0_M00_AXIS": {
@@ -2962,13 +2991,15 @@
       "axi_dma_0_mm2s_introut": {
         "ports": [
           "axi_dma_0/mm2s_introut",
-          "xlconcat_0/In0"
+          "xlconcat_0/In0",
+          "system_ila_0/probe0"
         ]
       },
       "axi_dma_0_s2mm_introut": {
         "ports": [
           "axi_dma_0/s2mm_introut",
-          "xlconcat_0/In1"
+          "xlconcat_0/In1",
+          "system_ila_0/probe1"
         ]
       },
       "rst_ps8_0_99M_interconnect_aresetn": {
@@ -2994,7 +3025,8 @@
           "rst_ps8_0_99M/peripheral_aresetn",
           "ps8_0_axi_periph/S00_ARESETN",
           "axi_dma_0/axi_resetn",
-          "ps8_0_axi_periph/M00_ARESETN"
+          "ps8_0_axi_periph/M00_ARESETN",
+          "axi_dwidth_converter_0/s_axi_aresetn"
         ]
       },
       "xlconcat_0_dout": {
@@ -3046,7 +3078,8 @@
           "ps8_0_axi_periph1/ACLK",
           "ps8_0_axi_periph1/S00_ACLK",
           "ps8_0_axi_periph1/M00_ACLK",
-          "ps8_0_axi_periph1/S01_ACLK"
+          "ps8_0_axi_periph1/S01_ACLK",
+          "axi_dwidth_converter_0/s_axi_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
@@ -3097,7 +3130,7 @@
               },
               "SEG_zynq_ultra_ps_e_0_HPC1_QSPI": {
                 "address_block": "/zynq_ultra_ps_e_0/SAXIGP1/HPC1_QSPI",
-                "offset": "0x00000000C0000000",
+                "offset": "0x10000000C0000000",
                 "range": "512M"
               }
             }
@@ -3122,7 +3155,7 @@
               },
               "SEG_zynq_ultra_ps_e_0_HPC0_QSPI": {
                 "address_block": "/zynq_ultra_ps_e_0/SAXIGP0/HPC0_QSPI",
-                "offset": "0x00000000C0000000",
+                "offset": "0x10000000C0000000",
                 "range": "512M"
               }
             }
@@ -3147,7 +3180,7 @@
               },
               "SEG_zynq_ultra_ps_e_0_HPC0_QSPI": {
                 "address_block": "/zynq_ultra_ps_e_0/SAXIGP0/HPC0_QSPI",
-                "offset": "0x00000000C0000000",
+                "offset": "0x10000000C0000000",
                 "range": "512M"
               }
             }
