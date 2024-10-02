@@ -35,6 +35,31 @@ raspi-gpio set 24 dl
 sudo picocom --baud 115200 --flow n /dev/ttyUSB0
 ```
 
+## Xilinx Vivado Set-up
+
+1. Include all necessary design sources, constraints and simulation sources
+    e.g. for [zcu106_aurora_dino][miob_dino]:
+        - [aurora_reset][aurora_reset.vhd]
+        - [axi_read_cache][axi_read_cache.vhd]
+        - [config_timer][config_timer.vhd]
+        - [dinoif_dac][dinoif_dac.vhd]
+        - [dinoif_fast_nologic][dinoif_fast_nologic.vhd]
+        - [prepend_seqnum][prepend_seqnum.vhd]
+        - [registerif][registerif.vhd]
+        - [dino-rev-b][dino-rev-b.xdc]
+
+2. If available, execute Tcl file
+```
+    source <file.tcl>
+```
+
+3. Create HDL Wrapper
+    - right-click on block design and select "Create HDL Wrapper"
+
+4. Set as TOP
+    - right-click on wrapped block design and select "Set as Top" 
+
+
 ## Photos
 
 ![Front View](photos/miob_front.jpeg)
@@ -61,3 +86,12 @@ The contents of this repository are licensed under the weakly-reciprocal version
 [uel-infis]: https://www.uel4-0.de/Infrastruktur/Mobiler-Pruefstand/
 [erigrid-2]: https://erigrid2.eu
 [cern-ohl-v2]: https://ohwr.org/cern_ohl_w_v2.txt
+[aurora_reset.vhd]: https://github.com/RWTH-ACS/dino/blob/main/hdl/vivado/design_src/aurora_reset.vhd
+[axi_read_cache.vhd]: https://github.com/RWTH-ACS/miob/blob/main/fpga/common/axi_read_cache.vhd
+[config_timer.vhd]: https://github.com/RWTH-ACS/dino/blob/main/hdl/vivado/design_src/config_timer.vhd
+[dinoif_dac.vhd]: https://github.com/RWTH-ACS/dino/blob/main/hdl/vivado/design_src/dinoif_dac.vhd
+[dinoif_fast_nologic.vhd]: https://github.com/RWTH-ACS/dino/blob/main/hdl/vivado/design_src/dinoif_fast_nologic.vhd
+[prepend_seqnum.vhd]: https://github.com/RWTH-ACS/dino/blob/main/hdl/vivado/design_src/prepend_seqnum.vhd
+[registerif.vhd]: https://github.com/RWTH-ACS/miob/blob/main/fpga/vc707_aurora_xbar/registerif.vhd
+[dino-rev-b.xdc]: https://github.com/RWTH-ACS/dino/blob/main/hdl/vivado/constr/dino-rev-b.xdc
+[miob_dino]: https://github.com/RWTH-ACS/miob/tree/main/fpga/zcu106_aurora_dino
