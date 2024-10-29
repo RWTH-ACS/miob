@@ -38,7 +38,7 @@ sudo picocom --baud 115200 --flow n /dev/ttyUSB0
 ## Xilinx Vivado Set-up
 
 1. Include all necessary design sources, constraints and simulation sources
-    e.g. for [zcu106_aurora_dino][miob_dino]:
+    - e.g. for [zcu106_aurora_dino][miob_dino]:
         - [aurora_reset][aurora_reset.vhd]
         - [axi_read_cache][axi_read_cache.vhd]
         - [config_timer][config_timer.vhd]
@@ -56,7 +56,7 @@ sudo picocom --baud 115200 --flow n /dev/ttyUSB0
 3. Create HDL Wrapper
     - right-click on block design and select "Create HDL Wrapper"
 
-4. Set as TOP
+4. Set as Top
     - right-click on wrapped block design and select "Set as Top" 
 
 
