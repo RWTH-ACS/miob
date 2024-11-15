@@ -41,7 +41,9 @@ MIOB_BASE_INSTALL = "dhcpcd \
                      vim \
                      openvpn \
                      dnf \
-                     clang"
+                     clang \
+                     openldap openldap-bin \
+                     nfs-utils nfs-utils-client"
 MIOB_EXTRA_INSTALL = "vfiotest \
                       peekpoke \
                       fmceeprom-write"

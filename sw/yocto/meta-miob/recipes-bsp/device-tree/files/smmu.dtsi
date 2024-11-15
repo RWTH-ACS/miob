@@ -8,16 +8,29 @@
 	Master ID of S_AXI_HPC0_FPD: 0b1000
 	AXI ID of first Master: 0b00 0000
 	-> 0x200
-   Activate IOMMUs für AXI DMA with most master interfaces (scatter gather with separate data interfaces) as per Xilinx Wiki:
+   Activate IOMMUs for AXI DMA with most master interfaces (scatter gather with separate data interfaces) as per Xilinx Wiki:
 */
-&axi_dma_0 {
+&zynq_axi_dma_0 {
     /*iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x202>;*/
-    iommus = <&smmu 0x200>, <&smmu 0x240>;
+    iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x240>;
 };
 
 &axis_interconnect_0_xbar {
-    iommus = <&smmu 0x200>, <&smmu 0x240>;
+    iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x240>;
 };
+
+&axi_iic_0 {
+    iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x240>;
+};
+
+&dino_registerif_0 {
+    iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x240>;
+};
+
+&zynq_axi_read_cache_0 {
+    iommus = <&smmu 0x200>, <&smmu 0x201>, <&smmu 0x240>;
+};
+
 
 /* set clock of SFP ports to 250 MHz */
 &si5328_clk {
