@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425
 SRC_URI = "https://ohwr.org/project/fmc-bus/-/archive/master/fmc-bus-master.zip \
            file://fmc_eeprom_2to3.patch"
 
-SRC_URI[sha256sum] = "f6d2012ce5906ba7eeb4f7f2d351bbbbc56b19ccbf5c50275a01b3c67d89e96e"
+SRC_URI[sha256sum] = "3e0e0eb23d95e0179b110c20e4197026d16867d5d7a75fdf7a12611e9995f439"
 
 RDEPENDS_${PN} += "python3-core"
 

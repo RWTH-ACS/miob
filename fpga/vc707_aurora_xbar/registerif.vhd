@@ -74,6 +74,7 @@ entity registerif is
        out6             : out STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
        out7             : out STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
        out8             : out STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
+       out9             : out STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
        
        out1_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
        out2_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
@@ -82,7 +83,8 @@ entity registerif is
        out5_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
        out6_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
        out7_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
-       out8_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0')
+       out8_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
+       out9_default     : in STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0')
        );
 end registerif;
 
@@ -100,13 +102,14 @@ architecture Behavioral of registerif is
     signal out6_reg : STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
     signal out7_reg : STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
     signal out8_reg : STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
+    signal out9_reg : STD_LOGIC_VECTOR(C_AXI_DATA_WIDTH-1 downto 0) := (others => '0');
 begin
 
 -- read channel
 S_AXI_RVALID <= rvalid;
 arready <= not rvalid;      
 S_AXI_ARREADY <= arready;
-process (S_AXI_ACLK, S_AXI_ARESETN, rvalid, S_AXI_ARVALID, S_AXI_RREADY, arready, S_AXI_ARADDR, out1_reg, out2_reg, out3_reg, out4_reg, out5_reg, out6_reg, out7_reg, out8_reg) begin
+process (S_AXI_ACLK, S_AXI_ARESETN, rvalid, S_AXI_ARVALID, S_AXI_RREADY, arready, S_AXI_ARADDR, out1_reg, out2_reg, out3_reg, out4_reg, out5_reg, out6_reg, out7_reg, out8_reg, out9_reg) begin
     if rising_edge(S_AXI_ACLK) then
         if S_AXI_ARESETN = '0' then
             rvalid <= '0';
@@ -136,6 +139,8 @@ process (S_AXI_ACLK, S_AXI_ARESETN, rvalid, S_AXI_ARVALID, S_AXI_RREADY, arready
                         S_AXI_RDATA <= out7_reg;
                     when std_logic_vector(to_unsigned(28, REG_ADDR_WIDTH)) =>
                         S_AXI_RDATA <= out8_reg;
+                    when std_logic_vector(to_unsigned(32, REG_ADDR_WIDTH)) =>
+                        S_AXI_RDATA <= out9_reg;
                     when std_logic_vector(to_unsigned(512, REG_ADDR_WIDTH)) =>
                         S_AXI_RDATA <= (others => '0');
                     when others =>
@@ -152,7 +157,7 @@ S_AXI_BVALID <= bvalid;
 process (S_AXI_ACLK, S_AXI_ARESETN, awready, out1_reg, out2_reg, out3_reg, out4_reg,
          out5_reg, out6_reg, out7_reg, out8_reg,
          S_AXI_AWVALID, S_AXI_WVALID, bvalid, S_AXI_BREADY, S_AXI_AWADDR, S_AXI_WDATA, 
-         S_AXI_BREADY, out1_default, out2_default, out3_default, out4_default, out5_default, out6_default, out7_default, out8_default) begin
+         S_AXI_BREADY, out1_default, out2_default, out3_default, out4_default, out5_default, out6_default, out7_default, out8_default, out9_default) begin
     if rising_edge(S_AXI_ACLK) then
         out1 <= out1_reg;
         out2 <= out2_reg;
@@ -162,6 +167,7 @@ process (S_AXI_ACLK, S_AXI_ARESETN, awready, out1_reg, out2_reg, out3_reg, out4_
         out6 <= out6_reg;
         out7 <= out7_reg;
         out8 <= out8_reg;
+        out9 <= out9_reg;
         if S_AXI_ARESETN = '0' or init_done = '0' then
             out1_reg <= out1_default;
             out2_reg <= out2_default;
@@ -171,6 +177,7 @@ process (S_AXI_ACLK, S_AXI_ARESETN, awready, out1_reg, out2_reg, out3_reg, out4_
             out6_reg <= out6_default;
             out7_reg <= out7_default;
             out8_reg <= out8_default;
+            out9_reg <= out9_default;
             init_done <= '1';
             awready <= '1';
             bvalid <= '0';
@@ -199,6 +206,8 @@ process (S_AXI_ACLK, S_AXI_ARESETN, awready, out1_reg, out2_reg, out3_reg, out4_
                         out7_reg <= S_AXI_WDATA;
                     when std_logic_vector(to_unsigned(28, REG_ADDR_WIDTH)) =>
                         out8_reg <= S_AXI_WDATA;
+                    when std_logic_vector(to_unsigned(32, REG_ADDR_WIDTH)) =>
+                        out9_reg <= S_AXI_WDATA;
                     when std_logic_vector(to_unsigned(512, REG_ADDR_WIDTH)) =>
                         if S_AXI_WDATA(0) = '1' then
                             out1_reg <= out1_default;
@@ -223,6 +232,9 @@ process (S_AXI_ACLK, S_AXI_ARESETN, awready, out1_reg, out2_reg, out3_reg, out4_
                         end if;
                         if S_AXI_WDATA(7) = '1' then
                             out8_reg <= out8_default;
+                        end if;
+                        if S_AXI_WDATA(8) = '1' then
+                            out9_reg <= out9_default;
                         end if;
                     when others =>
                 end case;

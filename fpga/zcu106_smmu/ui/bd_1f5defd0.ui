@@ -1,33 +1,43 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.790124",
-   "Default View_TopLeft":"-143,-82",
+   "Default View_ScaleFactor":"0.675925",
+   "Default View_TopLeft":"275,-287",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 660 -y 160 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1520 -y 210 -defaultsOSRD
-preplace inst ps8_0_axi_periph -pg 1 -lvl 3 -x 1170 -y 160 -defaultsOSRD
-preplace inst rst_ps8_0_99M -pg 1 -lvl 2 -x 660 -y 530 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -x 130 -y 410 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -x 130 -y 160 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -x 130 -y 520 -defaultsOSRD
-preplace netloc axi_dma_0_mm2s_introut 1 0 5 -20 -70 NJ -70 NJ -70 NJ -70 1720
-preplace netloc axi_dma_0_s2mm_introut 1 0 5 -10 340 230J 350 NJ 350 NJ 350 1690
-preplace netloc rst_ps8_0_99M_interconnect_aresetn 1 2 1 1010 140n
-preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 2 2 1020 280 1330J
-preplace netloc xlconcat_0_dout 1 1 1 250 290n
-preplace netloc xlconstant_0_dout 1 1 1 250 50n
-preplace netloc xlconstant_1_dout 1 1 1 240 70n
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 1 3 280 -40 1000 40 1330
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 2 260 -60 980
-preplace netloc axi_dma_0_M_AXI 1 1 4 290 -30 NJ -30 NJ -30 1700
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 2 1340 90 1690
-preplace netloc ps8_0_axi_periph_M00_AXI 1 3 1 1320 150n
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 1 990 100n
-preplace netloc axi_dma_0_M_AXI_SG 1 1 4 270 -50 NJ -50 NJ -50 1710
-levelinfo -pg 1 -40 130 660 1170 1520 1750
-pagesize -pg 1 -db -bbox -sgen -40 -90 1750 1330
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 810 -y -100 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1730 -y 210 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 3 -x 1350 -y 160 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 2 -x 810 -y 530 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x 230 -y 410 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 230 -y 160 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 230 -y 520 -defaultsOSRD
+preplace inst axis_interconnect_0 -pg 1 -lvl 4 -x 1730 -y -180 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 5 -x 2130 -y -200 -defaultsOSRD
+preplace inst ps8_0_axi_periph1 -pg 1 -lvl 2 -x 810 -y 220 -defaultsOSRD
+preplace inst axi_dwidth_converter_0 -pg 1 -lvl 1 -x 230 -y -60 -defaultsOSRD
+preplace netloc axi_dma_0_mm2s_introut 1 0 5 -10 580 450J 420 1170J 350 NJ 350 1950
+preplace netloc axi_dma_0_s2mm_introut 1 0 5 0 590 440J 410 1180J 360 NJ 360 1960
+preplace netloc rst_ps8_0_99M_interconnect_aresetn 1 1 4 490 380 1160 20 1530 50 1940
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 4 -20 600 460 430 1190 300 1520J
+preplace netloc xlconcat_0_dout 1 1 1 420 30n
+preplace netloc xlconstant_0_dout 1 1 1 390 -210n
+preplace netloc xlconstant_1_dout 1 1 1 410 -190n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 0 -140 430 -300 1150 10 1520 60 1910
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 2 470 -290 1120
+preplace netloc S00_AXI_1 1 1 4 480 -330 NJ -330 1500J 70 1890
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 2 1540 30 1920
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 4 480 370 NJ 370 NJ 370 1890
+preplace netloc axi_dma_0_M_AXI_SG 1 0 5 -20 -320 N -320 N -320 1510 40 1930
+preplace netloc axi_dwidth_converter_0_M_AXI 1 1 1 400 -130n
+preplace netloc axis_interconnect_0_M00_AXIS 1 3 2 1550 80 1900
+preplace netloc axis_interconnect_0_M01_AXIS 1 3 2 1550 20 1890
+preplace netloc ps8_0_axi_periph1_M00_AXI 1 1 4 490 -310 1130 -380 N -380 1910
+preplace netloc ps8_0_axi_periph_M00_AXI 1 3 1 N 150
+preplace netloc ps8_0_axi_periph_M01_AXI 1 3 1 1490 -280n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 1 1140 -120n
+levelinfo -pg 1 -40 230 810 1350 1730 2130 2240
+pagesize -pg 1 -db -bbox -sgen -40 -390 2240 1610
 "
 }
 0
